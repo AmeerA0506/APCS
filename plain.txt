@@ -1,0 +1,11 @@
+Team NAC :: Nakib Abedin, Ameer Alnasser, Corina Chen
+APCS
+CW-Binary to Decimal and Vice Versa conversions
+2021-09-23
+
+Bin2Dec
+set the value of y to 0. for each integer (int) in the input, if the int number to the right is 1, add the value of 2^(int-1) to y. return y after the loop
+Dec2Bin
+If the inputted value is not 0, make a string so that the
+
+
