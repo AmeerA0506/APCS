@@ -1,1 +1,7 @@
+Ameer Alnasser
+APCS
+HW05- Summer pre work
+2021-09-27
 
+00 walked us through what we need to run Java and use it. Everything went smoothly so far.
+JDK and Atom installed
