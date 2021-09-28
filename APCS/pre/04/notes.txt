@@ -1,1 +1,6 @@
+Ameer Alnasser
+APCS
+HW05- Summer pre work
+2021-09-27
 
+Its nice to see the general gist of functions from python continue into Java. The output should be wug you wugga wug. No I wug you wugga wug I wug. I am unsure what would happen after boggling the ping. 
