@@ -1,1 +1,6 @@
+Ameer Alnasser
+APCS
+HW05- Summer pre work
+2021-09-27
 
+01 walked us through basic Java language and how powershell for windows works for Windows. I was able to get Hello World! to be output when i ran Hello.java, with a little hiccup at the semicolon necessary
