@@ -1,1 +1,11 @@
+Ameer Alnasser
+APCS
+HW05- Summer pre work
+2021-09-27
 
+02 started teaching us variables and how to import them into our code. I ran intop many issues here:
+initiated the variable in between public class and public state
+misread what to do
+didn't know which class to put 
+
+Got it in the end, will likely give problems later too 
