@@ -4,7 +4,8 @@
 *2021-09-29
 */
 public class Greet {
-	public static void main(String[] args){
-		System.out.println("No hablo queso");
+	public static void greet(String[] args){
+		System.out.println("Howdy Jacob! how you mkdir?");
+		;
 	}
 }
