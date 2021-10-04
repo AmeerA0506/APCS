@@ -11,7 +11,7 @@
 * N/A
 */
 
-public class Bigsib {
+public class BigSib {
 
 
 	public static void greet(String input){
