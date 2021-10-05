@@ -1,17 +1,9 @@
-/**Ameer Alnasser
+/**Never Advise Children:: Ameer Alnasser-Turtle Boi, Corina Chen-Binktop, Nakib Abedin-Joker
+*Ameer Alnasser
 *APCS
 *HW09
 *2021-10-01
 *
-
-*DISCOVERIES
-* In order to run one function in the other,
-*
-*Unresolved questions:
-*
-* 
-*/
-
 
 public class BigSib {
 
