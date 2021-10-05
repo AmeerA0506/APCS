@@ -6,7 +6,8 @@
 *
 
 *DISCOVERIES
-*
+* instead of using void, you can set it up so that a string or a variable is returned instead of voiding (meaning that nothing is returned and the ufnction runs as usual)
+* 
 *Unresolved questions:
 * N/A
 */
