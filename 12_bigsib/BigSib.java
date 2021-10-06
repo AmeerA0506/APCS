@@ -8,7 +8,7 @@
 *Instance variables are called inside the class
 *QCC: 
 *What is the greet java file doing exactly? what is the point of richard?
-
+/
 
 public class BigSib {
     public String greeting;
