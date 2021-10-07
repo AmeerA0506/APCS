@@ -11,7 +11,7 @@
 */
 
 public class BigSib {
-    private String greeting;
+    String greeting;
     public BigSib(){
              greeting="Word up";
 	}
