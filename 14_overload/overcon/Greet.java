@@ -10,10 +10,10 @@
 public class Greet{
     main(String[] args ) {
       String greeting;
-          BigSib richard = new BigSib("Word up");
-          BigSib grizz = new BigSib("Hey ya");
-          BigSib dotCom = new BigSib("Sup");
-          BigSib tracy = new BigSib("Salutations");
+          BigSib richard = new BigSib();
+          BigSib grizz = new BigSib();
+          BigSib dotCom = new BigSib();
+          BigSib tracy = new BigSib();
           greeting = richard.greet("freshman");
           System.out.println(greeting);
           greeting = grizz.greet("Dr. Spaceman");
