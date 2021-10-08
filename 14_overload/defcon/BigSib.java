@@ -1,4 +1,4 @@
-/*Team: Ameer Alnasser, Sophia Eiden, Jacob Kirmayer
+/*Aardvarks are Just Kidding So Elegantly: Ameer Alnasser, Sophia Eiden, Jacob Kirmayer
 APCS
 HW14 -- Customize Your Creation / overloaded constructors
 2021-10-07
