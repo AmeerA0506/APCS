@@ -4,10 +4,8 @@ APCS
 HW13
 2021-10-06
 DISCO
-NEED TO REMEMBER WHERE I NEED TO CLOSE THE BRACKETS!!!
-Constructors in the beginning allow for the "null" originally valued in greeting to Word up
+while working with overloaded constructors, there needs to be another function
 QCC 
-What is the issue with making greeting public or private? they both work code-wise
 */
 
 public class BigSib {
