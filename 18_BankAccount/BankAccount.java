@@ -1,5 +1,5 @@
 /*
-AJR (Ameer, Jefford, Ryan)
+AJR (Ameer Alnasser, Jefford Shau, Ryan Lau)
 APCS
 HW18 -- BankAccount
 2021-10-14
@@ -8,11 +8,11 @@ HW18 -- BankAccount
 /*
 DISCO:
 We found out how to incorporate java.util.random into our code.
-we cna use both a defined and overloaded constructor
+we can use both a default and overloaded constructor
 QCC:
 Team AJR's Latest and Greatest Q2 Response:
 Because a constructor returns a instance of a class and because you can do:
-ClassName x = new ClassName();
+ClassName <name> = new ClassName();
 without any errors, it is safe to assume that there is already a constructor for all classes.
 
 Team AJR's Latest and Greatest Q3 Response:
