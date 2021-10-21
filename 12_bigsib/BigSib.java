@@ -2,16 +2,18 @@
 *APCS
 *HW12
 *2021-10-05
-*
+
 *DISCO:
 *string must be initialized in both Greet and BigSib
 *Instance variables are called inside the class
 *QCC: 
 *What is the greet java file doing exactly? what is the point of richard?
-/
+*/
 
 public class BigSib {
-    public String greeting;
+    public BigSib {
+	private String greeting;
+	greeting="Hello";
 
     public void setHelloMsg(String message){
         greeting = message;
