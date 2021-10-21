@@ -87,22 +87,22 @@ public class Stats {
         }
     }
 
-    public static int geoMean(int a, int b, int c) {
-        if (a >= 0 && b >= 0) {
-            int x = Math.pow(a * b * c, 1/3);
-            return x;
-        } else {
-            System.out.println("geoMean() does not work with negative inputs");
-            return -1;
-        }
-    }
-
-    public static double geoMean(double a, double b, double c) {
-        if (a >= 0 && b >= 0) {
-            return Math.pow(a * b * c, 1/3);
-        } else {
-            System.out.println("geoMean() does not work with negative inputs");
-            return -1;
-        }
+//    public static int geoMean(int a, int b, int c) {
+        //if (a >= 0 && b >= 0) {
+           // int x = Math.pow(a * b * c, 1/3);
+          //  return x;
+        //} else {
+        //    System.out.println("geoMean() does not work with negative inputs");
+      //      return -1;
+    //    }
+  //  }
+//
+    //public static double geoMean(double a, double b, double c) {
+        //if (a >= 0 && b >= 0) {
+          //  return Math.pow(a * b * c, 1/3);
+        //} else {
+       //     System.out.println("geoMean() does not work with negative inputs");
+     //       return -1;
+   //     }
     }
 }//end class
