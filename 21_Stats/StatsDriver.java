@@ -32,7 +32,7 @@ public class StatsDriver{
         System.out.println(s.max(0.0, 0.0)); // 0.0
         System.out.println(s.max(0.0, -2.0)); // 0.0
         System.out.println(s.max(-4.0, -2.0)); // -2.0
-        // int geoMean()
+     /*   // int geoMean()
         System.out.println(s.geoMean(18, 18)); // 18
         System.out.println(s.geoMean(2, 18)); // 6
         System.out.println(s.geoMean(0, 0)); // 0
@@ -45,4 +45,5 @@ public class StatsDriver{
         System.out.println(s.geoMean(-2.0, 18.0)); // geoMean() does not work with negative inputs
         System.out.println(s.geoMean(-2.0, -18.0)); // geoMean() does not work with negative inputs
     }
+    */
 }
