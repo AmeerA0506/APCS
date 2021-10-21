@@ -104,5 +104,5 @@ public class Stats {
        //     System.out.println("geoMean() does not work with negative inputs");
      //       return -1;
    //     }
-    }
+   // }
 }//end class
