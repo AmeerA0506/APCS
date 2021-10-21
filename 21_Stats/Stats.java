@@ -47,8 +47,7 @@ public class Stats {
             return b;
         }
     }
-
-    public static int geoMean(int a, int b) {
+/*    public static int geoMean(int a, int b) {
         if (a >= 0 && b >= 0) {
             int x = Math.pow(a * b, 1/2); 
             return x;
@@ -57,7 +56,6 @@ public class Stats {
             return -1;
         }
     }
-
     public static double geoMean(double a, double b) {
         if (a >= 0 && b >= 0) {
             return Math.pow(a * b, 1/2);
@@ -66,7 +64,7 @@ public class Stats {
             return -1.0;
         }
     }
-
+*/
     public static int max(int a, int b, int c) {
         if (a > b && a > c) {
             return a;
