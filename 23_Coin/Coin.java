@@ -125,13 +125,14 @@ public class Coin {
       postcond: Coin's attribs reset to starting vals
   ***/
   public void reset( String s, double d ) {
-    if((s == "heads")|| (s == "tails") && (0<=d<=1)){
+    if((s == "heads")|| (s == "tails") && (0<=d) && (d<=1)){
     s = upFace;
     flipCtr=0;
     headsCtr=0;
     tailsCtr=0;
     bias=.5;
   }
+}
 
   /***
    * String flip() -- simulates a Coin flip
@@ -144,18 +145,22 @@ public class Coin {
    ***/
   public String flip() {
     double v;
-    v=math.random();
+    v=Math.random();
     if (v >= .5){
       headsCtr+=1;
       upFace="heads";
+      flipCtr+=1;
+      bias=headsCtr/flipCtr;
+      return upFace;
     }
     else{
       tailsCtr+=1;
       upFace="tails";
+      flipCtr+=1;
+      bias=headsCtr/flipCtr;
+      return upFace;
     }
-    flipCtr+=1;
-    bias=headsCtr/flipCtr;
-    return upFace;
+
     }
 
 
@@ -168,9 +173,8 @@ public class Coin {
    ***/
   public boolean equals( Coin other ) {
 
-  }
-
-
+    return other.flip()==upFace;
+}
   /***
    * String toString() -- overrides toString() provided by Java
    * precond: n/a
