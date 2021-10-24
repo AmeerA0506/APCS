@@ -1,5 +1,19 @@
-/***
- ***/
+/**
+Aristocratic Hippos :: Ameer Alnasser, Hugo Jenkins
+APCS
+HW23: What does equality look like?
+2021-10-24
+time spent: 1.1 hr (excluding class time)
+DISCO:
+the syntax of conditionals (IE: || in java ==or in python)
+how to compare different objects of same class
+How to effectively utilize Pair Programming && compiling per step of the way
+How to change values initilaized with a defined constructor
+QCC:
+There was an issue when we set the boolean functon to return "other.flip()==upFace". It would correctly identify if its matched or not only sometimes. Why did it not work?
+Is there a more seameless way to organize brackets so you dont get lost in the syntax sauce?
+is there a quicker way to check if a value is one of a certain list (IE: we compared string s to coin names)?a
+**/
 
 public class Coin {
 
@@ -47,6 +61,7 @@ public class Coin {
   System.out.println("Invalid coin name");
 
 }
+upFace="heads";
 }
 
 
@@ -174,7 +189,7 @@ public class Coin {
    ***/
   public boolean equals( Coin other ) {
 
-    return other.flip()==upFace;
+    return other.upFace==upFace;
 }
   /***
    * String toString() -- overrides toString() provided by Java
