@@ -20,8 +20,8 @@ public class Coin {
    *  postcond:
    ***/
   public Coin() {
-    name="coin";
-    upFace="face";
+    name="null";
+    upFace="heads";
     flipCtr=0;
     headsCtr=0;
     tailsCtr=0;
@@ -45,6 +45,7 @@ public class Coin {
             name = s;
     } else {
   System.out.println("Invalid coin name");
+
 }
 }
 
@@ -181,7 +182,7 @@ public class Coin {
    * postcond: Return String comprised of name and current face
    ***/
   public String toString() {
-
+    return name + " -- " + upFace;
   }
 
 }//end class
