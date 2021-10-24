@@ -1,7 +1,4 @@
 /***
- *  class Coin
- *  by Clyde "Thluffy" Sinclair
- *  SKELETON
  ***/
 
 public class Coin {
@@ -9,7 +6,7 @@ public class Coin {
   //attributes aka instance vars
   String name;
   String upFace;
-  int value;
+  double value;
   int flipCtr;
   int headsCtr;
   int tailsCtr;
@@ -52,7 +49,6 @@ public class Coin {
 }
 
 
-  }
 
   /***
       Coin(String,String) --
@@ -61,10 +57,10 @@ public class Coin {
   ***/
   public Coin( String s, String nowFace ) {
     if ((s == "penny")|| (s == "nickel") || (s == "dime")|| (s=="quarter")|| (s== "half dollar" )|| (s == "dollar")){
-            name = s;
+      name = s;
     }
-    if(){
-      
+    if((nowFace == "heads")|| (nowFace == "tails")){
+      upFace = nowFace;
     }
 
 }
@@ -73,23 +69,23 @@ public class Coin {
   // Accessors...
   // ----------------------------
   public String getUpFace() {
-
+    return upFace;
   }
 
   public int getFlipCtr() {
-
+    return flipCtr;
   }
 
   public double getValue() {
-
+    return value;
   }
 
   public int getHeadsCtr() {
-
+    return headsCtr;
   }
 
   public int getTailsCtr() {
-
+    return tailsCtr;
   }
   // ----------------------------
 
@@ -101,7 +97,25 @@ public class Coin {
    * Returns value assigned.
    ***/
   private double assignValue( String s ) {
-
+    if(s == "penny"){
+      value = .01;
+    }
+    else if(s == "nickel"){
+      value = .05;
+    }
+    else if(s == "dime"){
+      value = .10;
+    }
+    else if(s=="quarter"){
+      value = .25;
+    }
+    else if(s== "half dollar"){
+      value = .50;
+    }
+    else if(s == "dollar"){
+      value = 1.00;
+    }
+    return value;
   }
 
 
@@ -111,9 +125,13 @@ public class Coin {
       postcond: Coin's attribs reset to starting vals
   ***/
   public void reset( String s, double d ) {
-
+    if((s == "heads")|| (s == "tails") && (0<=d<=1)){
+    s = upFace;
+    flipCtr=0;
+    headsCtr=0;
+    tailsCtr=0;
+    bias=.5;
   }
-
 
   /***
    * String flip() -- simulates a Coin flip
@@ -125,8 +143,21 @@ public class Coin {
    * Returns "heads" or "tails"
    ***/
   public String flip() {
+    double v;
+    v=math.random();
+    if (v >= .5){
+      headsCtr+=1;
+      upFace="heads";
+    }
+    else{
+      tailsCtr+=1;
+      upFace="tails";
+    }
+    flipCtr+=1;
+    bias=headsCtr/flipCtr;
+    return upFace;
+    }
 
-  }
 
 
   /***
