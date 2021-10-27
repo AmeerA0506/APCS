@@ -3,7 +3,7 @@ TNPG: (Row) 2 cool 4 skool :: Ameer Alnasser, Nada Hameed, Brian Kang, Jun Hong 
 APCS
 HW25: Do I repeat myself?
 2021--10--26
-time spent: 2 hr
+time spent: 1 hr
 
 
 DISCO:
