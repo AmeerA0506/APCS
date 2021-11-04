@@ -30,7 +30,7 @@ QCC:
 NA
 **/ 
 
-public class Pig{
+public class Pig_solo{
   //Q: How does this initialization make your life easier?
   //With this initialization, it is now easier to check if each letter in a word is a vowel which is used for the first letter in a Pig Latin translator.
   private static final String VOWELS = "aeiou";
