@@ -5,7 +5,7 @@
  * 2021-11-04
  * time spent: .75hrs
  *
- * class Pig
+ * class Pig_solo
  * a Pig Latin translator
  * ~~~~~~~~~~~~~~~~~~~ SKELETON ~~~~~~~~~~~~~~~~~~~
  *           9
