@@ -1,5 +1,5 @@
 /***
- * Aliens jogging rowdily :: Ameer, Ryan, Jefford
+ * Aliens jogging rowdily :: Ameer Alnasser, Ryan Lau, Jefford Shau
  * APCS
  * HW31 -- Pig Latin foundation
  * 2021-11-04
