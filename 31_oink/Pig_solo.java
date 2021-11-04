@@ -44,12 +44,7 @@ public class Pig_solo{
     =====================================*/
   public static boolean hasA( String w, String letter ) 
   {
-  for(int counter=0; counter<w.length();counter++){
-if(w.substring(counter,counter+1).equals(letter)){
-return true;
-}
-}
-return false;
+    return w.indexOf(letter) >= 0;
   }//end hasA()
 
 
