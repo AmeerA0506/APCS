@@ -1,24 +1,8 @@
 /**
-   Clyde "Thluffy" Sinclair
-   APCS
-   DEMO -- Use Scanner class to read from standard input
-
-   USAGE:
-   1. Read for understanding.
-   2. Record predictions.
-`  -We think it will not do anything
-   3.
-   $ javac <thisclass>.java
-   $ java <thisclass>
-   ...
-
-   4. enter text, followed by ENTER to send
-   ...
-
-   5. Reconcile predictions with observations.
-
-   ( CTRL-C to exit )
-
+Aliens Jogging Rapidly:: Ameer Alnasser, Ryan Lau, Jefford Shau
+APCS
+LAB00--Pig Latin translator 
+2021-11-09
 **/
 
 import java.util.Scanner;  //Scanner is not part of java's std lib
