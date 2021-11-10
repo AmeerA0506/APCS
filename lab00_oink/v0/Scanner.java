@@ -19,4 +19,4 @@ public class DemoScanner {
 
   }//end main()
 
-}//end class DemoScanner
+}//end class Scanner
