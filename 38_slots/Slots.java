@@ -32,7 +32,7 @@ public class Slots {
   {
 
     //allocate memory for _fruits based on size of FRUITS:
-  String[] _fruits= new String[FRUITS.length]; 
+   _fruits= new String[FRUITS.length]; 
   for(int i=0; i<FRUITS.length; i +=1){
    
   _fruits[i]=FRUITS[i];
@@ -152,7 +152,7 @@ public class Slots {
       System.out.println( "LOSE\n" );
       machine01.spinOnce();
     }
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    
     System.out.println( "====================================" );
     System.out.println( "Your spin..." + "\t" + machine01 );
     System.out.println( "WIN\n" );
@@ -167,7 +167,6 @@ public class Slots {
     System.out.println( "====================================" );
     System.out.println( "Your spin..." + "\t" + machine01 );
     System.out.println( "JACKPOT!\n" );
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }//end main
 
 }//end class Slots
