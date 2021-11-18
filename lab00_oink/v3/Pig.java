@@ -1,30 +1,34 @@
 // TNPG: AJR (Ameer Alnasser, Jefford Shau, Ryan Lau)
 // APCS
 // L00: Etterbay Odingcay Oughthray Ollaborationcay
-// 2021-11-08
+// 2021-11-09
 // time spent: 0.5 hrs
 
 /*
 DISCOVERIES
-    0. isAVowel() had to be modified so that uppercased vowels would return true
+    0. We can use String.toLowerCase() and String.toUpperCase() to make a String lowercased/uppercased
 
 UNRESOLVED QUESTIONS
     0. Are we allowed to modify final variables in future versions?
         ex: VOWELS to AaEeIiOoUuYy
-    1. How do we implement the DemoScanner to take in lines from in.words?
-    2. How do we know if a y in a string is a vowel?
-    3. What constitutes a word as having multiple consonants at the beginning of the word?
+    1. How do we know if a y in a string is a vowel?
+    2. How do we handle cases where there are multiple consonants in a word?
+    2. How do we handle punctuation in the middle of a word?
 
 TODO
     - [X] Feed Pig
     - [X] Debug Thluffy's translator
     - [X] Add new methods from library to Pig
     - [X] Implement support for basic words
+    - [X] Use Scanner to read from in.words
+    - [X] Implement support for phrases
+    - [X] Implement support for capitalization
     - [ ] Implement support for y
     - [ ] Implement support for multiple consonants at beginning of word
-    - [ ] Implement support for capitalization
     - [ ] Implement support for punctuation
-    - [ ] Use Scanner to read from in.words
+
+NEW IN v3
+    - Implement support for capitalization
 */
 
 /***
@@ -44,6 +48,8 @@ TODO
  *      then develop and test one method at a time.
  *      NEVER STRAY TOO FAR FROM COMPILABILITY/RUNNABILITY!
  ***/
+
+import java.util.Scanner;
 
 public class Pig
 {
@@ -168,15 +174,57 @@ public class Pig
         engToPig("java")   --> "avajay"
         **/
       public static String engToPig( String w ) {
-
           String ans = "";
 
-          if ( beginsWithVowel(w) )
-              ans = w + "way";
+          while (w.indexOf(" ") != -1) {
+              String word = w.substring(0, w.indexOf(" "));
+              boolean capitalize = false;
+              String translatedWord;
 
+              if (isUpperCase(word.substring(0, 1))) {
+                  capitalize = true;
+              }
+
+              // retain any capitalization in middle of the word
+              word = (word.substring(0, 1)).toLowerCase() + word.substring(1);
+
+              if ( beginsWithVowel(word) )
+                  translatedWord = word + "way ";
+              else {
+                  int vPos = word.indexOf( firstVowel(word) );
+                  translatedWord = word.substring(vPos) + word.substring(0,vPos) + "ay ";
+              }
+
+              if (capitalize) {
+                  ans += (translatedWord.substring(0, 1)).toUpperCase() + translatedWord.substring(1);
+              } else {
+                  ans += translatedWord;
+              }
+
+              w = w.substring(w.indexOf(" ") + 1);
+          }
+
+          boolean capitalize = false;
+          String translatedWord;
+
+          if (isUpperCase(w.substring(0, 1))) {
+              capitalize = true;
+          }
+
+          // retain any capitalization in middle of the word
+          w = (w.substring(0, 1)).toLowerCase() + w.substring(1);
+
+          if ( beginsWithVowel(w) )
+              translatedWord = w + "way ";
           else {
               int vPos = w.indexOf( firstVowel(w) );
-              ans = w.substring(vPos) + w.substring(0,vPos) + "ay";
+              translatedWord = w.substring(vPos) + w.substring(0,vPos) + "ay ";
+          }
+
+          if (capitalize) {
+              ans += (translatedWord.substring(0, 1)).toUpperCase() + translatedWord.substring(1);
+          } else {
+              ans += translatedWord;
           }
 
           return ans;
@@ -230,68 +278,12 @@ public class Pig
 
   public static void main( String[] args )
   {
-      System.out.println("hasA(\"lol\", \"l\") -> " +  hasA("lol", "l"));
-      System.out.println("hasA(\"lol\", \"r\") -> " +  hasA("lol", "r"));
-      System.out.println();
+      Scanner sc = new Scanner(System.in);
 
-      System.out.println("isAVowel(\"a\") -> " + isAVowel("a"));
-      System.out.println("isAVowel(\"e\") -> " + isAVowel("e"));
-      System.out.println("isAVowel(\"i\") -> " + isAVowel("i"));
-      System.out.println("isAVowel(\"o\") -> " + isAVowel("o"));
-      System.out.println("isAVowel(\"u\") -> " + isAVowel("u"));
-      System.out.println("isAVowel(\"A\") -> " + isAVowel("A"));
-      System.out.println("isAVowel(\"x\") -> " + isAVowel("x"));
-      System.out.println();
-
-      System.out.println("countVowels(\"lol\") -> " + countVowels("lol"));
-      System.out.println("countVowels(\"my name is jeff\") -> " + countVowels("my name is jeff"));
-      System.out.println("countVowels(\"xyz\") -> " + countVowels("xyz"));
-      System.out.println("countVowels(\"\") -> " + countVowels(""));
-      System.out.println();
-
-      System.out.println("hasAVowel(\"lol\") -> " + hasAVowel("lol"));
-      System.out.println("hasAVowel(\"my name is jeff\") -> " + hasAVowel("my name is jeff"));
-      System.out.println("hasAVowel(\"xyz\") -> " + hasAVowel("xyz"));
-      System.out.println("hasAVowel(\"\") -> " + hasAVowel(""));
-      System.out.println();
-
-      System.out.println("allVowels(\"lol\") -> " + allVowels("lol"));
-      System.out.println("allVowels(\"my name is jeff\") -> " + allVowels("my name is jeff"));
-      System.out.println("allVowels(\"xyz\") -> " + allVowels("xyz"));
-      System.out.println("allVowels(\"\") -> " + allVowels(""));
-      System.out.println();
-
-      System.out.println("firstVowel(\"lol\") -> " + firstVowel("lol"));
-      System.out.println("firstVowel(\"my name is jeff\") -> " + firstVowel("my name is jeff"));
-      System.out.println("firstVowel(\"xyz\") -> " + firstVowel("xyz"));
-      System.out.println("firstVowel(\"\") -> " + firstVowel(""));
-      System.out.println();
-
-      System.out.println("beginsWithVowel(\"ameer\") -> " + beginsWithVowel("ameer"));
-      System.out.println("beginsWithVowel(\"Ameer\") -> " + beginsWithVowel("Ameer"));
-      System.out.println("beginsWithVowel(\"lol\") -> " + beginsWithVowel("lol"));
-      System.out.println();
-
-      System.out.println("engToPig(\"apple\") -> " + engToPig("apple"));
-      System.out.println("engToPig(\"strong\") -> " + engToPig("strong"));
-      System.out.println("engToPig(\"java\") -> " + engToPig("java"));
-      System.out.println();
-
-      System.out.println("isPunc(\".\") -> " + isPunc("."));
-      System.out.println("isPunc(\"b\") -> " + isPunc("b"));
-      System.out.println();
-
-      System.out.println("isUpperCase(\"x\") -> " + isUpperCase("x"));
-      System.out.println("isUpperCase(\"X\") -> " + isUpperCase("X"));
-      System.out.println();
-
-      System.out.println("hasPunc(\"hello world!\") -> " + hasPunc("hello world!"));
-      System.out.println("hasPunc(\"hello, world\") -> " + hasPunc("hello, world"));
-      System.out.println("hasPunc(\"hello world\") -> " + hasPunc("hello world"));
-      System.out.println("hasPunc(\"\") -> " + hasPunc(""));
-      System.out.println();
-
-      System.out.println("beginsWithUpper(\"Ameer\") -> " + beginsWithUpper("Ameer"));
-      System.out.println("beginsWithUpper(\"ameer\") -> " + beginsWithUpper("ameer"));
-  }//end main()
-}//end class Pig
+      while (sc.hasNextLine()) {
+          String line = sc.nextLine();
+          String translatedLine = engToPig(line);
+          System.out.println(line + " -> " + translatedLine);
+      }
+  }
+}

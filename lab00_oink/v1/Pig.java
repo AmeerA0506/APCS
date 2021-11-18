@@ -1,30 +1,43 @@
 // TNPG: AJR (Ameer Alnasser, Jefford Shau, Ryan Lau)
 // APCS
 // L00: Etterbay Odingcay Oughthray Ollaborationcay
-// 2021-11-08
-// time spent: 0.5 hrs
+// 2021-11-09
+// time spent: 0.5 hrs + classtime
 
 /*
 DISCOVERIES
-    0. isAVowel() had to be modified so that uppercased vowels would return true
+    0. see HOW WE UTILIZED SCANNER DEMO
 
 UNRESOLVED QUESTIONS
     0. Are we allowed to modify final variables in future versions?
         ex: VOWELS to AaEeIiOoUuYy
-    1. How do we implement the DemoScanner to take in lines from in.words?
-    2. How do we know if a y in a string is a vowel?
-    3. What constitutes a word as having multiple consonants at the beginning of the word?
+    1. How do we know if a y in a string is a vowel?
+    2. What constitutes a word as having multiple consonants at the beginning of the word?
 
 TODO
     - [X] Feed Pig
     - [X] Debug Thluffy's translator
     - [X] Add new methods from library to Pig
     - [X] Implement support for basic words
+    - [X] Use Scanner to read from in.words
+    - [ ] Implement support for phrases
     - [ ] Implement support for y
     - [ ] Implement support for multiple consonants at beginning of word
     - [ ] Implement support for capitalization
     - [ ] Implement support for punctuation
-    - [ ] Use Scanner to read from in.words
+
+HOW WE UTILIZED SCANNER DEMO (v1)
+    - We used the Scanner to read lines from std-in and then passed those lines as an argument to the engToPig method
+    - We then printed original word followed by a "->" and the translated word
+
+WHAT CAUSES THE RUNTIME ERROR IN THE SCANNER DEMO
+    - The second sc.next() method call in DemoScanner.java caused the runtime error
+    - This is because hasNext() only checks if there is 1 additional line from std-in
+    - This is an issue because DemoScanner.java calls .next() twice in the body of the while loop
+    - So when there is only 1 line left, and .next() is called, it will cause the runtime error
+
+NEW IN v1
+    - Removed method tests from main and replaced with Scanner implementation (see HOW WE UTILIZED SCANNER DEMO)
 */
 
 /***
@@ -44,6 +57,8 @@ TODO
  *      then develop and test one method at a time.
  *      NEVER STRAY TOO FAR FROM COMPILABILITY/RUNNABILITY!
  ***/
+
+import java.util.Scanner;
 
 public class Pig
 {
@@ -230,68 +245,12 @@ public class Pig
 
   public static void main( String[] args )
   {
-      System.out.println("hasA(\"lol\", \"l\") -> " +  hasA("lol", "l"));
-      System.out.println("hasA(\"lol\", \"r\") -> " +  hasA("lol", "r"));
-      System.out.println();
+      Scanner sc = new Scanner(System.in);
 
-      System.out.println("isAVowel(\"a\") -> " + isAVowel("a"));
-      System.out.println("isAVowel(\"e\") -> " + isAVowel("e"));
-      System.out.println("isAVowel(\"i\") -> " + isAVowel("i"));
-      System.out.println("isAVowel(\"o\") -> " + isAVowel("o"));
-      System.out.println("isAVowel(\"u\") -> " + isAVowel("u"));
-      System.out.println("isAVowel(\"A\") -> " + isAVowel("A"));
-      System.out.println("isAVowel(\"x\") -> " + isAVowel("x"));
-      System.out.println();
-
-      System.out.println("countVowels(\"lol\") -> " + countVowels("lol"));
-      System.out.println("countVowels(\"my name is jeff\") -> " + countVowels("my name is jeff"));
-      System.out.println("countVowels(\"xyz\") -> " + countVowels("xyz"));
-      System.out.println("countVowels(\"\") -> " + countVowels(""));
-      System.out.println();
-
-      System.out.println("hasAVowel(\"lol\") -> " + hasAVowel("lol"));
-      System.out.println("hasAVowel(\"my name is jeff\") -> " + hasAVowel("my name is jeff"));
-      System.out.println("hasAVowel(\"xyz\") -> " + hasAVowel("xyz"));
-      System.out.println("hasAVowel(\"\") -> " + hasAVowel(""));
-      System.out.println();
-
-      System.out.println("allVowels(\"lol\") -> " + allVowels("lol"));
-      System.out.println("allVowels(\"my name is jeff\") -> " + allVowels("my name is jeff"));
-      System.out.println("allVowels(\"xyz\") -> " + allVowels("xyz"));
-      System.out.println("allVowels(\"\") -> " + allVowels(""));
-      System.out.println();
-
-      System.out.println("firstVowel(\"lol\") -> " + firstVowel("lol"));
-      System.out.println("firstVowel(\"my name is jeff\") -> " + firstVowel("my name is jeff"));
-      System.out.println("firstVowel(\"xyz\") -> " + firstVowel("xyz"));
-      System.out.println("firstVowel(\"\") -> " + firstVowel(""));
-      System.out.println();
-
-      System.out.println("beginsWithVowel(\"ameer\") -> " + beginsWithVowel("ameer"));
-      System.out.println("beginsWithVowel(\"Ameer\") -> " + beginsWithVowel("Ameer"));
-      System.out.println("beginsWithVowel(\"lol\") -> " + beginsWithVowel("lol"));
-      System.out.println();
-
-      System.out.println("engToPig(\"apple\") -> " + engToPig("apple"));
-      System.out.println("engToPig(\"strong\") -> " + engToPig("strong"));
-      System.out.println("engToPig(\"java\") -> " + engToPig("java"));
-      System.out.println();
-
-      System.out.println("isPunc(\".\") -> " + isPunc("."));
-      System.out.println("isPunc(\"b\") -> " + isPunc("b"));
-      System.out.println();
-
-      System.out.println("isUpperCase(\"x\") -> " + isUpperCase("x"));
-      System.out.println("isUpperCase(\"X\") -> " + isUpperCase("X"));
-      System.out.println();
-
-      System.out.println("hasPunc(\"hello world!\") -> " + hasPunc("hello world!"));
-      System.out.println("hasPunc(\"hello, world\") -> " + hasPunc("hello, world"));
-      System.out.println("hasPunc(\"hello world\") -> " + hasPunc("hello world"));
-      System.out.println("hasPunc(\"\") -> " + hasPunc(""));
-      System.out.println();
-
-      System.out.println("beginsWithUpper(\"Ameer\") -> " + beginsWithUpper("Ameer"));
-      System.out.println("beginsWithUpper(\"ameer\") -> " + beginsWithUpper("ameer"));
-  }//end main()
-}//end class Pig
+      while (sc.hasNext()) {
+          String line = sc.next();
+          String translatedLine = engToPig(line);
+          System.out.println(line + " -> " + translatedLine);
+      }
+  }
+}
