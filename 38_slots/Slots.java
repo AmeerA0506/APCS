@@ -1,5 +1,5 @@
 /*****************************************************
- * Ameer Alnasser
+ * (Do not) Consume Arsenic:: Ameer Alnasser,Corina Chen
  * APCS pd06
  * HW38 -- Shmoney
  * 2021-11-18
@@ -32,9 +32,9 @@ public class Slots {
   {
 
     //allocate memory for _fruits based on size of FRUITS:
-   _fruits= new String[FRUITS.length]; 
+   _fruits= new String[FRUITS.length];
   for(int i=0; i<FRUITS.length; i +=1){
-   
+
   _fruits[i]=FRUITS[i];
   }
     //copy elements of FRUITS into _fruits:
@@ -80,11 +80,10 @@ public class Slots {
     // iterate through the array, swapping
     // the val at each index with a randomly chosen other index
     for(int i=0; i<FRUITS.length;i+=1  ){
-    int y=(int) (Math.random()*15);
+    int y= (int)(Math.random()*15);
     swap(i, y);
   }
   String y = toString();
-  System.out.println(y);
 }
 
   /*=====================================
@@ -97,7 +96,7 @@ public class Slots {
   {
     boolean retBoo = false;
     if(_fruits[0].equals(_fruits[1])&&_fruits[2].equals(_fruits[1])){
-    
+
     retBoo = true;
 
 }
@@ -114,19 +113,19 @@ public class Slots {
     =====================================*/
   public boolean miniWin()
   {
-  
-    boolean retBoo = true;
 
+if( jackpot()==true || !(_fruits[0].equals(_fruits[1])||_fruits[2].equals(_fruits[1])||(_fruits[0].equals(_fruits[2])))){
 
-    return retBoo;
+    return true;
   }
-
+return false;
+}
 
   //main() method for testing
   public static void main( String[] args ) {
     //usage: move bar below down 1 line at a time to test functionality...
 
-    
+
     Slots machine01 = new Slots();
     Slots machine02 = new Slots();
 
@@ -145,14 +144,14 @@ public class Slots {
     //test gamble-until-you-win mechanism
     System.out.println( "Preparing to spin until a mini win! . . ." );
     System.out.println( "------------------------------------" );
-                
+
     //if you haven't won, spin again until you win!
     while( machine01.miniWin() == false ) {
       System.out.println( "Your spin..." + "\t" + machine01 );
       System.out.println( "LOSE\n" );
       machine01.spinOnce();
     }
-    
+
     System.out.println( "====================================" );
     System.out.println( "Your spin..." + "\t" + machine01 );
     System.out.println( "WIN\n" );
