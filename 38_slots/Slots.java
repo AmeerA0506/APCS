@@ -51,7 +51,7 @@ public class Slots {
   {
     String output="";
     for(int i=0; i<3; i+=1){
-      output+=_fruits[i]+ "  ";
+      output+=_fruits[i]+ "\t";
     }
     return output;
   }
@@ -64,8 +64,9 @@ public class Slots {
     =====================================*/
   private void swap( int i, int j )
   {
+    String foo=_fruits[i];
   _fruits[i]=_fruits[j];
-  _fruits[j]=_fruits[i];
+  _fruits[j]=foo;
   }
 
 
