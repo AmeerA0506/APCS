@@ -1,0 +1,71 @@
+Ameer Alnasser
+APCS
+HW36: All Quacked up
+2021-11-19
+
+You cannot debug the same way for different bugs.
+
+Errors:
+Compile-time error: syntax in shambles, not working
+
+      First Step: Dont make errors!! Slowly but surely does it, incremental development
+         When error made, easily diagnosable
+
+      Deceiving numbers: 
+         Even if program says there are 10 errors or 20, there may be one fix, you just need to find it.
+         
+      Don't Ignore the compiler message!
+      
+      Common Errors:
+        " Check that all parentheses and brackets are balanced and properly nested. All method definitions should be nested within a class definition. All program statements should be within a method definition.
+          Remember that uppercase letters are not the same as lowercase letters.
+          Check for semicolons at the end of statements (and no semicolons after curly braces).
+
+          Make sure that any strings in the code have matching quotation marks. Make sure that you use double quotes for strings, and single quotes for characters.
+          For each assignment statement, make sure that the type on the left is the same as the type on the right. Make sure that the expression on the left is a variable name or something else that you can assign a value to (like an element of an array).
+          For each method invocation, make sure that the arguments you provide are in the right order and have the right type, and that the object you are invoking the method on is the right type.
+          If you are invoking a value method, make sure you are doing something with the result. If you are invoking a void method, make sure you are not trying to do something with the result.
+          If you are invoking an instance method, make sure you are invoking it on an object with the right type. If you are invoking a static method from outside the class where it is defined, make sure you specify the class name (using dot notation).
+          Inside an instance method, you can refer to the instance variables without specifying an object. If you try that in a static method—with or without this—you get a message like “non-static variable x cannot be referenced from a static context.”"
+          
+      Still not compiling :(
+          First, 
+            make sure file is updated to latest version, a different file could be compiling
+                -Check by making obvious syntax error
+                
+          Second,
+                -debug by bisectiobn 
+                    -Binary search for errors, cut out code by half and half and start bvringing it back once theres no error
+          Error Messages arent always clear
+          
+Runtime errors:
+    hanging==infinite loop/recursion
+      -just write a print statemnt starting and ending the recursion so you can see where the program is stuck
+    -stackOverflowerror=runtime
+    
+    Check to see for base case
+        -condition that makes method return inevitably IE: when counter hits 0 
+        
+    Write commnets for flow of execution
+
+Exceptions:
+NullPointerException
+there is a variable thats initialized but blank, could be a for loop error   
+ArrayIndexOutOfBounds:
+The conditional for the array may not account for all possible errors
+Arithmetic Exception;
+Somethign is wrong w an arithmetic operation like dividing by 0 
+
+Logic Errors:
+  Program does what it's told, only you know desired outcome
+  Common Errors:
+  "Remember that integer division always rounds toward zero. If you want fractions, use double. More generally, use integers for countable things and floating-point numbers for measurable things.
+    Floating-point numbers are only approximate, so don’t rely on them to be perfectly accurate. You should probably never use the == operator with doubles. Instead of writing if (d == 1.23), do something like if (Math.abs(d - 1.23) < .000001).
+    When you apply the equality operator (==) to objects, it checks whether they are identical. If you meant to check equivalence, you should use the equals method instead.
+     By default for user-defined types, equals checks identity. If you want a different notion of equivalence, you have to override it.
+    Inheritance can lead to subtle logic errors, because you can run inherited code without realizing it. See “Flow of execution” on page ??."
+    
+ If there's an error and an expression in which there are many conditionals and variables, etc, break up the conditional into booleans and then do if x is ture and y is true
+ 
+ Nothings happening:
+  Leave computer, other homework, friends, family, go walking
