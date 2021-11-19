@@ -115,7 +115,15 @@ public class Slots {
   public boolean miniWin()
   {
 
-if( jackpot()==true || !(_fruits[0].equals(_fruits[1])||_fruits[2].equals(_fruits[1])||(_fruits[0].equals(_fruits[2])))){
+if(jackpot==true)&& (!
+  
+      (
+        _fruits[0].equals(_fruits[1]
+                         ))
+        &&
+        !(_fruits[2].equals(_fruits[1]))
+        && 
+    !(_fruits[0].equals(_fruits[2]))){
 
     return true;
   }
