@@ -13,3 +13,4 @@ YoRPG.java:52: error: non-static variable special cannot be referenced from a st
 4 errors
 
 :(
+ UPDATE: FIXED BY NOT REFERRING TO THEM  FROM A STATIC CONTEXT
