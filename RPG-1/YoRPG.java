@@ -27,29 +27,28 @@ class Protagonist{
   public Protagonist(String name){
     this.name=name;
   }
-  public static String getName(){
+  public String getName(){
     return name;
   }
-  public static int attack(Monster monster){
-    int damage=0;
-    if (getSpecial()==true){
-        damage=(int)(Math.random()*20);
-        monster.HP-=damage;
-    }
-    else{
-      damage=(int)(Math.random()*10 +10);
-      monster.HP-=damage;
+  public int attack(Monster monster){
 
-    }
+    int damage=0;
+    if (special){
+    damage=(int)(Math.random()*15);
+  }
+  else{
+    damage=(int)(Math.random()*10+10);
+  }
+  monster.HP-=damage;
     return damage;
   }
-  public static void normalize(){
+  public void normalize(){
     special=false;
   }
-  public static void specialize(){
+  public void specialize(){
     special=true;
   }
-  public static boolean getSpecial(){
+  public boolean getSpecial(){
     return special;
   }
   public boolean isAlive(){
@@ -61,15 +60,15 @@ class Protagonist{
   }
 }
 class Monster{
-  int HP=50;
-  public static int attack(Protagonist pro){
+  int HP=25;
+  public int attack(Protagonist pro){
     int damage=0;
-    if (pro.getSpecial()==true){
-        damage=(int)(Math.random()*20);
+    if (pro.special==true){
+        damage=(int)(Math.random()*10);
         pro.HP-=damage;
     }
     else{
-      damage=(int)(Math.random()*10 +10);
+      damage=(int)(Math.random()*5 +5);
       pro.HP-=damage;
 
     }
@@ -224,11 +223,7 @@ public class YoRPG {
 
 
   public static void main( String[] args ) {
-    //As usual, move the begin-comment bar down as you progressively
-    //test each new bit of functionality...
 
-    /*================================================
-    //loading...
     YoRPG game = new YoRPG();
     int encounters = 0;
     while( encounters < MAX_ENCOUNTERS ) {
@@ -238,7 +233,7 @@ public class YoRPG {
     System.out.println();
     }
     System.out.println( "Thy game doth be over." );
-	  ================================================*/
+
   }//end main
 
 }//end class YoRPG
