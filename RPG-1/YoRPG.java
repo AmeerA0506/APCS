@@ -20,8 +20,6 @@ import java.io.*;
 import java.util.*;
 
 class Protagonist{
-
-
   String name;
   int HP=50;
   boolean special=false;
@@ -34,11 +32,14 @@ class Protagonist{
   }
   public static int attack(Monster monster){
     int damage=0;
-    if (    getSpecial()==true){
+    if (getSpecial()==true){
         damage=(int)(Math.random()*20);
+        monster.HP-=damage;
     }
     else{
       damage=(int)(Math.random()*10 +10);
+      monster.HP-=damage;
+
     }
     return damage;
   }
@@ -65,9 +66,12 @@ class Monster{
     int damage=0;
     if (pro.getSpecial()==true){
         damage=(int)(Math.random()*20);
+        pro.HP-=damage;
     }
     else{
       damage=(int)(Math.random()*10 +10);
+      pro.HP-=damage;
+
     }
     return damage;
   }
