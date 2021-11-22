@@ -21,39 +21,62 @@ import java.util.*;
 
 class Protagonist{
 
-  String Username;
+
+  String name;
   int HP=50;
-  boolean special;
+  boolean special=false;
+
+  public Protagonist(String name){
+    this.name=name;
+  }
   public static String getName(){
-    String Username=YoRPG.name;
-    return Username;
+    return name;
   }
   public static int attack(Monster monster){
-    if (special==true)(
-        monster.HP-=(int)(Math.random()*20);
-    )
-    return monster.HP;
+    int damage=0;
+    if (    getSpecial()==true){
+        damage=(int)(Math.random()*20);
+    }
+    else{
+      damage=(int)(Math.random()*10 +10);
+    }
+    return damage;
   }
   public static void normalize(){
-     special=false;
+    special=false;
   }
   public static void specialize(){
     special=true;
   }
+  public static boolean getSpecial(){
+    return special;
+  }
   public boolean isAlive(){
-    retBoo=false;
-    if
+    boolean retBoo=true;
+    if(HP<=0){
+      retBoo = false;
+    }
+    return retBoo;
   }
 }
 class Monster{
   int HP=50;
-  public static void attack(Protagonist pro){
-    boolean boo= specialize();
+  public static int attack(Protagonist pro){
+    int damage=0;
+    if (pro.getSpecial()==true){
+        damage=(int)(Math.random()*20);
+    }
+    else{
+      damage=(int)(Math.random()*10 +10);
+    }
+    return damage;
   }
-
   public boolean isAlive(){
-    retBoo=false;
-    if
+    boolean retBoo=true;
+    if(HP<=0){
+      retBoo= false;
+    }
+    return retBoo;
   }
 }
 public class YoRPG {
@@ -82,8 +105,6 @@ public class YoRPG {
     gameOver = false;
     isr = new InputStreamReader( System.in );
     in = new BufferedReader( isr );
-    pat= new Protagonist(pat);
-    smaug = new Monster(smaug);
     newGame();
   }
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -210,7 +231,6 @@ public class YoRPG {
     if ( !game.playTurn() )
     break;
     encounters++;
-
     System.out.println();
     }
     System.out.println( "Thy game doth be over." );
