@@ -3,7 +3,7 @@
 APCS pd6
 HW40 -- 2D arrays
 2021-11-30
-
+time taken:.5hrs
 /*
 DISCOS:
 - Adding a pair of "" allows the array to be printed out without needing any
