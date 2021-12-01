@@ -21,11 +21,11 @@ public class TwoDimArray
   {
   String n="";
   for(int i=0;i<a.length;++i){
-    n+="[";
+    n+="{";
     for(int j=0; j<a[i].length-1; ++j){
       n+=a[i][j]+", ";
     }
-    n+=a[i][a[i].length-1]+"]\n";
+    n+=a[i][a[i].length-1]+"}\n";
   }
   System.out.println(n);
   }
@@ -38,11 +38,11 @@ public class TwoDimArray
   {
     String post = "";
     for (int[] i : a ) {
-      post+="[";
+      post+="{";
            for (int j : i ) {
              post += j+ " ";
            }
-           post += "]\n";
+           post += "}\n";
          }
          System.out.println( post );
        }
