@@ -11,6 +11,7 @@ DISCOS
 QCCS
 - Something completely unrelated to the work, but why does DISCOS and QCCS turn
   two different shades of orange while uncommented?
+- Is there a way to have a floor/ceiling function? IE for compareTo, i wanted to return calling - param but thatd be a double. when i typecasted it all went to 0 for reasons I dont understand
 */
 
 public class Rational {
