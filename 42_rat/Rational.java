@@ -95,7 +95,8 @@ public class Rational {
       q *= input.p;
     }
     else {
-      System.out.println( "Illegal. Division by 0 error.");
+      System.out.println( "Invalid input. returning original rational");
+      toString();
     }
   }
 
