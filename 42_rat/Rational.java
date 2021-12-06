@@ -1,20 +1,20 @@
 /**
-(Do Not) Consume Arsenic:: Ameer Alnasser & Corina Chen with test cases from Thinker Gabriel Thompson
+(Do Not) Consume Arsenic:: Ameer Alnasser & Corina Chen
 APCS pd6
 HW42: Be Rational!
-2021-12-1
+2021-12-3
 time taken: .5hrs
 
-DISCO:
-protected seems like the best class for most variables, leaves very little to mess up in both directions
-toString should not have parameters
+/*
+DISCOS
+- According to Mr.Mykolyk, "this" is good for making sure things are told apart.
+QCCS
+- Something completely unrelated to the work, but why does DISCOS and QCCS turn
+  two different shades of orange while uncommented?
+*/
 
-QCC:
-Visualizer is key, especially in mathematical situations in which there is a compiling. in one instance, we multiplied and divided a certain object and were wondering why the division was off. Unbeknownst to us at the time, it was because we multiplied first, then divided.
-
-should the error message be before or after the output?
-**/
 public class Rational {
+
   private int p; // Tis a denominator
   private int q; // Tis a numberator
 
@@ -78,8 +78,15 @@ public class Rational {
   public int compareTo ( Rational input ) {
     double calling = this.floatValue();
     double param = input.floatValue();
-    int output= (int) calling-param;
-    return output;
+    if ( calling == param ) {
+      return 0;
+    }
+    else if ( calling > param ) {
+      return 1;
+    }
+    else {
+      return -1;
+    }
   }
 
   // Simply fraction multiplication
@@ -95,8 +102,7 @@ public class Rational {
       q *= input.p;
     }
     else {
-      System.out.println( "Invalid input. returning original rational");
-      toString();
+      System.out.println( "Illegal. Division by 0 error.");
     }
   }
 
@@ -159,5 +165,7 @@ public class Rational {
     System.out.println(t.compareTo(s)); // Should return -1
     System.out.println(e.compareTo(s)); // Should return 0
   }
+
+}
 
 }
