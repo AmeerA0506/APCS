@@ -26,7 +26,7 @@ public class SuperArray
   //default constructor – initializes 10-item array
   public SuperArray()
   {
-    _size=10;
+    _size=0;
     _data=new int[10];
   }
 
@@ -48,8 +48,8 @@ return n;
   //double capacity of SuperArray
   private void expand()
   {
-    _size=_size*2;
-    _data=new int[_size *2];
+    _size=_data.length*2;
+    _data=new int[_size];
   }
 
 
