@@ -23,7 +23,7 @@ public class SuperArray
   public String toString()
   {
     String foo = "[";
-    for( int i = 0; i < _size; i++ ) {
+    for( int i = 0; i < _data.length; i++ ) {
       foo += _data[i] + ",";
     }
     if ( foo.length() > 1 )
