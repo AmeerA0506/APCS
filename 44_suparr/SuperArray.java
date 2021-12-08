@@ -1,5 +1,5 @@
 /**
-Always Aardvark::Ameer Alnasser
+Always Alone::Ameer Alnasser
 APCS pd 6
 HW44
 2021-12-8
@@ -35,13 +35,12 @@ public class SuperArray
 
 
   //double capacity of SuperArray
-  private void expand()
+ private void expand()
   {
     int[] temp = new int[ _data.length * 2 ];
     for( int i = 0; i < _data.length; i++ )
       temp[i] = _data[i];
-    _data =new int[temp.length];
-    _data=temp;
+    _data = temp;
   }
 
 
@@ -58,6 +57,10 @@ public class SuperArray
   {
     int temp = _data[index];
     _data[index] = newVal;
+    
+    if (index  > _size-1) { 
+      _size = index +1; 
+    }
     return temp;
   }
 
@@ -65,16 +68,14 @@ public class SuperArray
   //adds an item after the last item
   public void add( int newVal )
   {
-    /* YOUR IMPLEMENTATION HERE */
       _data[_size] = newVal;
-      _size+=1;
+      _size=_data[newVal];
   }
 
 
   //inserts an item at index
   public void add( int index, int newVal )
   {
-    /* YOUR IMPLEMENTATION HERE */
     if(index >= _data.length){
       expand();
     }
@@ -90,7 +91,6 @@ public class SuperArray
   // //shifts elements left to fill in newly-empted slot
   public void remove( int index )
   {
-    /* YOUR IMPLEMENTATION HERE */
     for(int i = index; i < _size-1; i ++){
       _data[i] = _data[i + 1];
     }
@@ -101,7 +101,6 @@ public class SuperArray
   //return number of meaningful items in _data
   public int size()
   {
-    /* YOUR IMPLEMENTATION HERE */
     return _size;
   }
 
