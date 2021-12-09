@@ -12,6 +12,7 @@ QCC:
 N/A
 **/
 
+
 public class SuperArray implements ListInt
 {
 
@@ -80,7 +81,7 @@ public class SuperArray implements ListInt
 
 
   //inserts an item at index
-  public void add( int index, int newVal )
+  public boolean add( int index, int newVal )
   {
     //first expand if necessary
     if ( _size >= _data.length )
@@ -90,17 +91,19 @@ public class SuperArray implements ListInt
     }
     _data[index] = newVal;
     _size++;
+    return true;
   }
 
 
   //removes the item at index
   //shifts elements left to fill in newly-empted slot
-  public void remove( int index )
+  public boolean remove( int index )
   {
     for( int i = index; i < _size - 1; i++ ) {
       _data[i] = _data[i+1];
     }
     _size--;
+    return true;
   }
 
 
@@ -115,7 +118,7 @@ public class SuperArray implements ListInt
   //main method for testing
   public static void main( String[] args )
   {
-      SuperArray curtis = new SuperArray();
+      ListInt curtis = new SuperArray();
       System.out.println( "Printing empty SuperArray curtis..." );
       System.out.println( curtis );
 
