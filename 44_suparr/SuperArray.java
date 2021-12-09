@@ -8,7 +8,7 @@ HW44
 Disco:
 (redisco) private variables can still be edited through the current class.
 _size is meant to point to the elements that matter, so after add, remove, or set.
-Solo Work is hard
+
 QCC:
 N/A
 **/
