@@ -4,7 +4,14 @@ APCS pd 6
 HW44
 2021-12-8
 **/
-
+/**
+Disco:
+(redisco) private variables can still be edited through the current class.
+_size is meant to point to the elements that matter, so after add, remove, or set.
+Solo Work is hard
+QCC:
+N/A
+**/
 public class SuperArray
 {
 
@@ -58,7 +65,9 @@ public class SuperArray
   {
     int temp = _data[index];
     _data[index] = newVal;
+  _size+=1;
     return temp;
+  
   }
 
 
