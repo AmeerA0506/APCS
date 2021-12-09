@@ -118,7 +118,7 @@ public class SuperArray implements ListInt
   //main method for testing
   public static void main( String[] args )
   {
-      SuperArray curtis = new SuperArray(); //all methods in ListInt are inside of the main argument, am confused
+      SuperArray curtis = new SuperArray(); 
       System.out.println( "Printing empty SuperArray curtis..." );
       System.out.println( curtis );
 
@@ -128,14 +128,6 @@ public class SuperArray implements ListInt
 
       System.out.println("Printing populated SuperArray curtis...");
       System.out.println(curtis);
-
-      for( int i = 0; i < 3; i++ ) {
-      curtis.expand();
-      System.out.println("Printing expanded SuperArray curtis...");
-      System.out.println(curtis);
-      System.out.println("new length of underlying array: "
-      + curtis._data.length );
-      }
 
       SuperArray mayfield = new SuperArray();
       System.out.println("Printing empty SuperArray mayfield...");
