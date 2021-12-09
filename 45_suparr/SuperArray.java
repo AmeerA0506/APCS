@@ -1,25 +1,17 @@
-/*
-TNPG: Always Aardvarks :: Ameer Alnasser
-APCS pd6
+/**
+Always Alone::Ameer Alnasser
+APCS pd 6
 HW44
-2021-12-07
-time spent: .5 hrs
-DISCOS:
+2021-12-8
+**/
+/**
+Disco:
+(redisco) private variables can still be edited through the current class.
+_size is meant to point to the elements that matter, so after add, remove, or set.
+Solo Work is hard
+QCC:
 N/A
-QCCS:
-I broke the first set of functionality somewhere in this code and cannot debug it 
-/***************************
- * class SuperArray version 2.0
- * (SKELETON)
- * Wrapper class for array. Facilitates
- * resizing
- * expansion
- * read/write capability on elements
- * adding an element to end of array
- * adding an element at specified index
- * removing an element at specified index
- ***************************/
-
+**/
 public class SuperArray
 {
 
@@ -59,16 +51,6 @@ public class SuperArray
     _data = temp;
   }
 
-//expand capacity by given number of elements
-private void expandint(int expand)
-{
-  int[] temp = new int[ _data.length + expand];
-  for( int i = 0; i < _data.length; i++ )
-    temp[i] = _data[i];
-  _data = temp;
-  _size=_size+expand;
-}
-
 
   //accessor -- return value at specified index
   public int get( int index )
@@ -83,43 +65,41 @@ private void expandint(int expand)
   {
     int temp = _data[index];
     _data[index] = newVal;
+  _size+=1;
     return temp;
+  
   }
 
 
   //adds an item after the last item
   public void add( int newVal )
   {
-      expandint(1);
-      _data[_size] = newVal;
+    add( _size, newVal );
   }
 
 
   //inserts an item at index
   public void add( int index, int newVal )
   {
-
-
-    if (index > _size){
-    expandint(_size-index);
+    //first expand if necessary
+    if ( _size >= _data.length )
+      expand();
+    for( int i = _size; i > index; i-- ) {
+      _data[i] = _data[i-1]; //each slot gets value of left neighbor
     }
-    for (int i = _size; i > index; i--) {
-      _data[i] = _data[i - 1];
-    }
-    _size+=1;
     _data[index] = newVal;
+    _size++;
   }
 
 
-  // //removes the item at index
-  // //shifts elements left to fill in newly-empted slot
+  //removes the item at index
+  //shifts elements left to fill in newly-empted slot
   public void remove( int index )
   {
-    /* YOUR IMPLEMENTATION HERE */
-    _size--;
-    for(int i = index; i < _size; i ++){
-      _data[i] = _data[i + 1];
+    for( int i = index; i < _size - 1; i++ ) {
+      _data[i] = _data[i+1];
     }
+    _size--;
   }
 
 
@@ -134,7 +114,6 @@ private void expandint(int expand)
   //main method for testing
   public static void main( String[] args )
   {
-
       SuperArray curtis = new SuperArray();
       System.out.println( "Printing empty SuperArray curtis..." );
       System.out.println( curtis );
@@ -183,7 +162,12 @@ private void expandint(int expand)
       mayfield.add(1,77);
       System.out.println("Printing SuperArray mayfield post-insert...");
       System.out.println(mayfield);
+    /*~~~~~~~~move~me~down~~~~~~~~~~~~~~V~~~~~~~~
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|~~~~~~~~*/
   }//end main()
+
+
+}//end class
 
 
 }//end class
