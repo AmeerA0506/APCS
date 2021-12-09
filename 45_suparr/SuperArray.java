@@ -118,7 +118,7 @@ public class SuperArray implements ListInt
   //main method for testing
   public static void main( String[] args )
   {
-      ListInt curtis = new SuperArray();
+      SuperArray curtis = new SuperArray(); //all methods in ListInt are inside of the main argument, am confused
       System.out.println( "Printing empty SuperArray curtis..." );
       System.out.println( curtis );
 
@@ -150,22 +150,7 @@ public class SuperArray implements ListInt
       System.out.println("Printing populated SuperArray mayfield...");
       System.out.println(mayfield);
 
-      mayfield.remove(3);
-      System.out.println("Printing SuperArray mayfield post-remove...");
-      System.out.println(mayfield);
-      mayfield.remove(3);
-      System.out.println("Printing SuperArray mayfield post-remove...");
-      System.out.println(mayfield);
 
-      mayfield.add(3,99);
-      System.out.println("Printing SuperArray mayfield post-insert...");
-      System.out.println(mayfield);
-      mayfield.add(2,88);
-      System.out.println("Printing SuperArray mayfield post-insert...");
-      System.out.println(mayfield);
-      mayfield.add(1,77);
-      System.out.println("Printing SuperArray mayfield post-insert...");
-      System.out.println(mayfield);
     /*~~~~~~~~move~me~down~~~~~~~~~~~~~~V~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|~~~~~~~~*/
   }//end main()
