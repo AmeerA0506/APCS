@@ -6,12 +6,12 @@ HW44
 **/
 /**
 Disco:
-(redisco) private variables can still be edited through the current class.
-_size is meant to point to the elements that matter, so after add, remove, or set.
+Interfaces act separately from superclasses, yet both share the uniformity idea
 Solo Work is hard
 QCC:
 N/A
 **/
+
 public class SuperArray implements ListInt
 {
 
@@ -72,9 +72,10 @@ public class SuperArray implements ListInt
 
 
   //adds an item after the last item
-  public void add( int newVal )
+  public boolean add( int newVal )
   {
     add( _size, newVal );
+    return true;
   }
 
 
@@ -165,9 +166,6 @@ public class SuperArray implements ListInt
     /*~~~~~~~~move~me~down~~~~~~~~~~~~~~V~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|~~~~~~~~*/
   }//end main()
-
-
-}//end class
 
 
 }//end class
