@@ -10,4 +10,5 @@ public interface ListInt{
   int set (int index, int x);
   int size();
   boolean add(int index, int x);
+  boolean remove(int x);
 }
