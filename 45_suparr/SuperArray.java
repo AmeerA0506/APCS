@@ -12,7 +12,7 @@ Solo Work is hard
 QCC:
 N/A
 **/
-public class SuperArray
+public class SuperArray implements ListInt
 {
 
   private int[] _data;  //underlying ("encapsulated") container
