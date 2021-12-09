@@ -141,6 +141,9 @@ public class SuperArray implements ListInt
 
       System.out.println("Printing populated SuperArray mayfield...");
       System.out.println(mayfield);
+            mayfield.remove(5);
+      System.out.println("Printing populated SuperArray mayfield...");
+      System.out.println(mayfield);
 
 
     /*~~~~~~~~move~me~down~~~~~~~~~~~~~~V~~~~~~~~
