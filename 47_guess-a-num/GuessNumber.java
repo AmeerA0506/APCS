@@ -1,6 +1,6 @@
-// And Then There Were Two :: Ameer Alnasser and HUUUUUGOOOO JENKINS
+// YAH :: Ameer Alnasser + TurtleBoi and HUUUUUGOOOO JENKINS + Boary
 // APCS pd06
-// HW47 -- Guess a Number!
+// HW47 -- Guess Again
 // 2021-12-15w
 // time spent: .25 hrs excluding class time
 
@@ -21,9 +21,11 @@
 
 /***
     DISCO:
-    SOPln does not end a function. Values can be modified after the fact
-    -
+    SOPln does not end a method. Values can be modified after the fact
+    Breaks are important while impleemnting an iterative loop
+
     QCC:
+
  ***/
 import java.util.Scanner;
 
@@ -59,7 +61,7 @@ public class GuessNumber
     ==================================================*/
   public void playRec()
   {
-    System.out.print("Guess a num bt " + _lo + " & " + _hi + ": ");
+    System.out.print("Guess a # fr " + _lo + "-" + _hi + ": ");
     int guess = sc.nextInt();
     _guessCtr++;
     //3 cases: we either found it, too hi, too lo
@@ -69,7 +71,6 @@ public class GuessNumber
       System.out.println("Guess has been eliminated already, try guessing again");
       playRec();
     }
-    else{
     if (_lo == _hi) {
 System.out.println("Unfortunate... The number was " + _target);
 }
@@ -85,7 +86,6 @@ System.out.println("Unfortunate... The number was " + _target);
       _hi = guess - 1;
       playRec();
     }
-  }
 }
 }
   /*==================================================
@@ -98,7 +98,7 @@ System.out.println("Unfortunate... The number was " + _target);
     int guess;
 
     while( true ) {
-      System.out.print("Guess a num bt " + _lo + " & " + _hi + ": ");
+      System.out.print("Guess a # fr " + _lo + "-" + _hi + ": ");
       guess = sc.nextInt();
 
       //3 cases: we either found it, too hi, too lo
@@ -131,8 +131,8 @@ System.out.println("Unfortunate... The number was " + _target);
   public void play()
   {
     //use one or the other below:
-  //  playRec();
-    playIter();
+  playRec();
+  //  playIter();
   }
 
 
@@ -142,6 +142,7 @@ System.out.println("Unfortunate... The number was " + _target);
 
     //instantiate a new game
     GuessNumber g = new GuessNumber(1,100);
+    System.out.println(g._target);
     //start the game
     g.play();
     /*-----------------------------
@@ -149,3 +150,4 @@ System.out.println("Unfortunate... The number was " + _target);
   }
 
 }//end class GuessNumber
+
