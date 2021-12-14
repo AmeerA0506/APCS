@@ -1,8 +1,8 @@
-// Clyde "Thluffy" Sinclair
-// APCS pd0
-// HW47 -- ?
+// And Then There Were Two :: Ameer Alnasser and HUUUUUGOOOO JENKINS
+// APCS pd06
+// HW47 -- Guess a Number!
 // 2021-12-15w
-// time spent: _ hrs
+// time spent: .25 hrs excluding class time
 
 /***
  * class GuessNumber -- fun fun fun!
@@ -21,6 +21,8 @@
 
 /***
     DISCO:
+    SOPln does not end a function. Values can be modified after the fact
+    -
     QCC:
  ***/
 import java.util.Scanner;
@@ -63,9 +65,16 @@ public class GuessNumber
     //3 cases: we either found it, too hi, too lo
 
     /* YOUR CODE HERE */
+    if((guess< _lo)||(guess>_hi)){
+      System.out.println("Guess has been eliminated already, try guessing again");
+      playRec();
+    }
+    else{
     if (_lo == _hi) {
-      System.out.println("Unfortunate... The number was " + _target);
-    }else if (guess == _target) {
+System.out.println("Unfortunate... The number was " + _target);
+}
+ else {
+   if (guess == _target) {
       System.out.println("Correct! It took " + _guessCtr + " guesses");
     } else if (guess < _target) {
       System.out.println("Too low");
@@ -77,8 +86,8 @@ public class GuessNumber
       playRec();
     }
   }
-
-
+}
+}
   /*==================================================
     void playIter() -- Prompts a user to guess until guess is correct.
     Uses iteration.
@@ -96,10 +105,13 @@ public class GuessNumber
 
       /* YOUR CODE HERE */
       _guessCtr++;
-      if (_lo == _hi) {
-        System.out.println("Unfortunate... The number was " + _target);
-      }else if (guess == _target) {
+      if((guess< _lo)||(guess>_hi)){
+        System.out.println("Guess has been eliminated already, try guessing again");
+      }
+      else{
+       if (guess == _target) {
         System.out.println("Correct! It took " + _guessCtr + " guesses");
+        break;
       } else if (guess < _target) {
         System.out.println("Too low");
         _lo = guess + 1;
@@ -107,16 +119,19 @@ public class GuessNumber
         System.out.println("Too high");
         _hi = guess - 1;
       }
-
+      if (_lo == _hi) {
+        System.out.println("Unfortunate... The number was " + _target);
+        break;
     }
   }
-
+}
+}
 
   //wrapper for playRec/playIter to simplify calling
   public void play()
   {
     //use one or the other below:
-    //playRec();
+  //  playRec();
     playIter();
   }
 
@@ -124,12 +139,13 @@ public class GuessNumber
   //main method to run it all
   public static void main( String[] args )
   {
+
     //instantiate a new game
     GuessNumber g = new GuessNumber(1,100);
+    System.out.println(g._target);
     //start the game
     g.play();
     /*-----------------------------
-
     -----------------------------*/
   }
 
