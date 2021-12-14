@@ -142,7 +142,6 @@ System.out.println("Unfortunate... The number was " + _target);
 
     //instantiate a new game
     GuessNumber g = new GuessNumber(1,100);
-    System.out.println(g._target);
     //start the game
     g.play();
     /*-----------------------------
