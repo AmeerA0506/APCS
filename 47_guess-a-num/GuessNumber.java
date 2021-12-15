@@ -23,9 +23,11 @@
 DISCO:
 0) SOPln does not end a method. Values can be modified after the fact
 1) Breaks are important while impleemnting an iterative loop
+
 QCC:
 0) Besides personal preference, how do you know whether recursion or iteration is better?
 1) Is this homework to demonstrate the efficiency of binary search to us?
+
  ***/
 import java.util.Scanner;
 
