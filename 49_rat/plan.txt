@@ -1,0 +1,5 @@
+0. Take Rational.java from library
+1. Read Java API
+2. Implement equals() method
+3. Check if it works for Rationals
+4. Make it work with long, int, short
