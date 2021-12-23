@@ -1,20 +1,19 @@
-/**
-(Do Not) Consume Arsenic:: Ameer Alnasser & Corina Chen
-APCS pd6
-HW42: Be Rational!
-2021-12-3
-time taken: .5hrs
+// YAH :: Ameer Alnasser + TurtleBoi and HUUUUUGOOOO JENKINS + Boary
+// APCS pd06
+// HW49 -- Rational Standards Compliance (Equals method)
+// 2021-12-22W
+// time spent: 1 hrs including class time
 
 /*
-DISCOS
-- According to Mr.Mykolyk, "this" is good for making sure things are told apart.
-QCCS
-- Something completely unrelated to the work, but why does DISCOS and QCCS turn
-  two different shades of orange while uncommented?
-- Is there a way to have a floor/ceiling function? IE for compareTo, i wanted to return calling - param but thatd be a double. when i typecasted it all went to 0 for reasons I dont understand
-*/
+Disco:
+instanceof is an operator that tells us if an object is an instance of another object or a class :).
+If we add a boolean of instanceof, we can shortcircuit the equals method when the parameter given is not an instance of the Rational class
 
-public class Rational {
+QCC:
+How would we take in floating type inputs of equals? We have a general idea on how to do other numerical representations, but due to double having a 64-bit precision, it would be difficult in determining the denominator
+
+*/
+public class Rational implements Comparable{
 
   private int p; // Tis a denominator
   private int q; // Tis a numberator
@@ -30,7 +29,7 @@ public class Rational {
     p = a;
     q = b;
     if ( b == 0 ) {
-      System.out.println( "Denominator cannot be zero. It will take default value of one until you reconsider." );
+      System.err.println( "Denominator cannot be zero. It will take default value of one until you reconsider." );
       q = 1;
     }
   }
@@ -76,9 +75,9 @@ public class Rational {
   }
 
   // Compare two nums
-  public int compareTo ( Rational input ) {
+  public int compareTo ( Object input ) {
     double calling = this.floatValue();
-    double param = input.floatValue();
+    double param = ((Rational)input).floatValue();
     if ( calling == param ) {
       return 0;
     }
@@ -122,20 +121,14 @@ public class Rational {
       p = num1 - num2;
       q *= input.q;
   }
+/*
+returns true if object is equal to this instance
+*/
 
   public boolean equals(Object input){
-    Rational a = (Rational) input;
-    this.reduce();
-    a.reduce();
-    return (a.p==this.p&&a.q==this.q);
+    return (input instanceof Rational) && (this.compareTo((Rational) input)==0);
   }
 
-  public static void main ( String[] args ) {
-    Rational a= new Rational(2,3);
-    Rational b= new Rational(4,6);
-    System.out.println(a.equals(b));
-    a = new Rational(4,5);
-    System.out.println(a.equals(b));
-  }
+
 
 }
