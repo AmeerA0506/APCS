@@ -71,7 +71,7 @@ public void addLinear(Integer newVal){
    _data.add(size(), newVal);
    }
 //Best Case: O(1) -> Item is at beginning of list,
-//Worst Case: O(n) + O( log_2 (n) ) -> Item is at end of list, log_2 (n) is from the helper function, n is from the iteration being done for this
+//Worst Case: O(n) -> Item is at end of list, n is from the iteration being done for this
  public void addBinary(Integer newVal)
  {
  if (size() == 0) {
