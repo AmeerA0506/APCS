@@ -1,12 +1,17 @@
 // Team Aliens Arriving Naughtily: Nakib Abedin + Ameer Alnasser + Alif Rahman
 // APCS pd06
-// Lab02
+// HW55
 // 2022-1-11
-/**********************************************
- * class OrderedArrayList
- * wrapper class for ArrayList
- * maintains invariant that elements are ordered (ascending)
- **********************************************/
+
+/**
+Disco:
+the time complexity of a method depends on the term with the highest degree of n. IE: If there is a for loop and a binary search, the time compelxity would only be O(n)
+
+QCC:
+Why doesn't other terms of a method factor into the time complexity?
+**/
+
+
 import java.util.ArrayList;
 public class OrderedArrayList
 {
