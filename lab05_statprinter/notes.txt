@@ -1,5 +1,5 @@
-Team Phantom Tollbooth (Clyde Sinclair, Fierce Dragon)
-APCS pd0
+Team BAR Mitzvah (Ameer Alnasser, ben Belotser, Michael Kamela, Ryan Lau)
+APCS pd6
 L05 -- pulling it together
 2022-02-03r
 time spent:  hrs
@@ -7,19 +7,17 @@ time spent:  hrs
 
 DISCO
 ------------------------------------------------
-* 
+* computers are so slow man
 ================================================
 
 
 QCC
 ------------------------------------------------
-* 
+*
 ================================================
 
 
 MISC
 ------------------------------------------------
-* 
+*
 ================================================
-
-

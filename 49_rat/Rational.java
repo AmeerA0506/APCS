@@ -76,6 +76,13 @@ public class Rational implements Comparable{
 
   // Compare two nums
   public int compareTo ( Object input ) {
+    if ( ! (input instanceof Rational) ) {
+      // ClassCastException specified by Java API.
+      // Input String is optional; gives diagnostics info.
+      throw new ClassCastException("\nMy first error message! "
+                                   + " compareTo() input not a Rational");
+    }
+
     double calling = this.floatValue();
     double param = ((Rational)input).floatValue();
     if ( calling == param ) {

@@ -1,8 +1,9 @@
-// Clyde "Thluffy" Sinclair
-// APCS pd0
+// Team BAR Mitzvah (Ameer Alnasser, ben Belotser, Michael Kamela, Ryan Lau)
+// APCS pd6
 // L05 -- pulling it together
 // 2022-02-03r
 // time spent:  hrs
+
 
 /***
  * class StatPrinterApp
@@ -64,7 +65,7 @@ public class StatPrinterApp
     System.out.println( i + " is local mode?\t" + sp2.isLocalMode(i) );
     }
     System.out.println( "histogram:" );
-    sp2.printHistogram( 50 );
+//    sp2.printHistogram( 50 );
   }
 
 }//end StatPrinterApp
