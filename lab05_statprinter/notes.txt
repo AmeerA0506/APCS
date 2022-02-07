@@ -2,22 +2,38 @@ Team BAR Mitzvah (Ameer Alnasser, ben Belotser, Michael Kamela, Ryan Lau)
 APCS pd6
 L05 -- pulling it together
 2022-02-03r
-time spent:  hrs
-
+time spent:  1.0 hrs
 
 DISCO
 ------------------------------------------------
-* computers are so slow man
+* Integer division will disregard the decimal places essentially flooring the result so 7 / 3 = 2
+* NullPointerExceptions are probably caused by uninitialized variables, in the sense that we did not declare the ArrayList inside the method, which gave us a NullPointerException.
 ================================================
 
 
 QCC
 ------------------------------------------------
-*
+* How can we easily tell what n refers to for big O notation?
+* How do you pronounce Mykolyk?
+* What is the time notation of printHistogram?
+================================================
+
+
+BIG O
+------------------------------------------------
+StatPrinter: O(n)
+
+max: O(n)
+
+isLocalMode: O(1)
+
+getLocalModes: O(n)
+
+printHistogram: O(n)
 ================================================
 
 
 MISC
 ------------------------------------------------
-*
+* Why is the school computer so slow some days?
 ================================================
