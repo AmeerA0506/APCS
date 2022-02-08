@@ -1,0 +1,28 @@
+BAR Mitzvah:: Ameer Alnasser, ben Belotser, Ryan Lau, Michael Kamela\
+Ameer Alnasser
+APCSpd6
+HW60:A Termite is-a Turtle, a Thinker is-a Turtle 
+
+OBSERVABLES/DISCO:
+Very discombobulated for the first attempts
+There was never any order, a bunch of thinkeren wandering around
+We were told in the end to stick our hands out waiting for cards. Now i have a reasoning for this that I will get into
+All decks>1 card are not sorted unless otherwise stated (after being given the cards you can sort them yourself if you wish)
+When given a card, we were never told that it HAD to stay with us, as we can still take or give
+
+QCC:
+can we look at a sorted deck? I am running under this premise as we physically cannot do this otherwise
+Are we allowed to communicate our plans with the entire class? Because if there are 32 thinkeren firmware, it would be unable to do anything
+Is it greatest to least or least to greatest? My firmware is based off the premise that its least on the bottom and greatest on top
+
+THINKER FIRMWARE::
+Distribute the cards with one half going clockwise and one half going counterclockwise so we can distribute the cards quickly and with ease.// We need to get as many sorted decks as quick as we can
+If you have 2 cards, stay put for a hot minute, once an adjacent thinker gives in their card and has no more, then give them your card to sort it. 
+If you have the smallest card (IE: 2 of Diamonds) stand in front of the class. The thinker with the 2 of clubs then proceeds to go and give in their card, and while this is going on, other thinkeren are trying to connect their cards. If there is a visible partner around you (IE: if you have the 2 of hearts you see the 2 of spades) you connect them with the smallest under
+While this is going on, to streamline the process, the thinker with the highest card (A of sp) also stands up at a different spot in the class. Then the guy with the A of hearts goes and hands it in, continuing until everyone's hands are cleared.
+Ideally, in the end when every thinker has no cards, the two halves merge to maintain the order. 
+
+Other idea: 
+When roaming looking for accepters of your card as a giver, look for an empty hand. If not found, then look for the card 1 "card" smaller than yours (x of clubs to x of spades or x of spades to x + 1 of diamonds).
+Once the taker has two cards sorted, look for an adjacent pair and give/take it from them. 
+When a thinker now has more than two cards, the lowest card is placed in the left hand and the rest (with the greatest on top) is in the right hand so givers are aware of the range. 
