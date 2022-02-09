@@ -1,8 +1,8 @@
-// BA Mitzvah:: Ameer Alnasser, ben Belotser, Ryan Lau, Michael Kamela\
-// Ameer Alnasser
+// BA Mitzvah:: Ameer Alnasser, ben Belotser, Michael Kamela
 // APCSpd6
 // HW61:Instructions so Simple...
 //2022-02-06
+//time spent: 2 hrs
 /***
   class MergeSort
   Implements mergesort on array of ints.
@@ -20,11 +20,13 @@ public class MergeSort
    ******************************************************/
   private static int[] merge( int[] a, int[] b )
   {
+    a= sort(a);
+    b= sort(b);
     int[] Merge=new int[a.length+b.length];
     int AIndex=0;
     int BIndex=0;
     int CIndex=0;
-    while (1==1){
+    while(AIndex<a.length&&BIndex<b.length){
       if(a[AIndex]>b[BIndex]){
         Merge[CIndex]=b[BIndex];
         BIndex+=1;
@@ -34,20 +36,19 @@ public class MergeSort
         AIndex+=1;
       }
       CIndex+=1;
-      if(AIndex==a.length){
-        while (1==1){
-          Merge[CIndex]=b[BIndex];
-          BIndex+=1;
-          CIndex+=1;
-        }
+}
+    if(b.length==BIndex){
+      while(a.length>AIndex){
+        Merge[CIndex]=a[AIndex];
+        AIndex+=1;
+        CIndex+=1;
       }
-      else if(BIndex==b.length){
-        while (1==1){
-          Merge[CIndex]=a[AIndex];
-          AIndex+=1;
-          CIndex+=1;
-
-        }
+    }
+    else if(a.length==AIndex){
+      while(b.length>BIndex){
+        Merge[CIndex]=b[BIndex];
+        BIndex+=1;
+        CIndex+=1;
       }
     }
     return Merge;
@@ -61,25 +62,18 @@ public class MergeSort
    ******************************************************/
   public static int[] sort( int[] arr)
   {
+    if(arr.length==1){
+      return arr;
+    }
     int[] sort1=new int[(arr.length)/2];
     int[] sort2=new int[arr.length-(arr.length/2)];
     int[] output= new int[arr.length];
-    int counter=0;
     for(int i=0;i<(arr.length/2);i++){
       sort1[i]=arr[i];
       sort2[i]=arr[i+(arr.length/2)];
     }
-    if (sort1.length==1&&sort2.length==1){
-     int[] merge= new int[2];
-     merge=merge(sort1,sort2);
-     output[counter]=merge[0];
-     output[counter+1]=merge[1];
-     counter+=2;
-    }
-    else{
-      sort(sort1);
-      sort(sort2);
-    }
+
+    output=merge(sort(sort1),sort(sort2));
     return output;
   }//end sort()
 
@@ -112,9 +106,9 @@ public class MergeSort
       int[] arr2 = {1,2};
       int[] arr3 = {3,4};
       int[] arr4 = {1,2,3,4};
-      int[] arr5 = {4,3,2,1};
-      int[] arr6 = {9,42,17,63,0,512,23};
-      int[] arr7 = {9,42,17,63,0,9,512,23,9};
+      int[] arr5 = {4,3,2,1};//not sorted, so merge should not work until it is sorted
+      int[] arr6 = {9,42,17,63,0,512,23}; //not sorted, so merge should not work until it is sorted
+      int[] arr7 = {9,42,17,63,0,9,512,23,9};//not sorted, so merge should not work until it is sorted
       System.out.println("\nTesting mess-with-array method...");
       printArray( arr3 );
       mess(arr3);
