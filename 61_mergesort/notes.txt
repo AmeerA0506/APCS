@@ -26,3 +26,8 @@ Other idea:
 When roaming looking for accepters of your card as a giver, look for an empty hand. If not found, then look for the card 1 "card" smaller than yours (x of clubs to x of spades or x of spades to x + 1 of diamonds).
 Once the taker has two cards sorted, look for an adjacent pair and give/take it from them. 
 When a thinker now has more than two cards, the lowest card is placed in the left hand and the rest (with the greatest on top) is in the right hand so givers are aware of the range. 
+Revised firmware::
+1st step: Remember who gave you your cards. If you have more than one card, give half of your deck to one person. Continue until you have one card (and remember who u gave it to)
+2nd step: After having one card, it is now declared sorted. Place it in one of your hands and wait until other people you gave it to give it back.
+3rd step: Do not do anything until all people you gave cards to gave it back. Then, place the lower card you see face down in front of you. Continue until no cards in front of your
+4th step: Give the now sorted deck back to whoever gave it to you
