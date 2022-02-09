@@ -20,8 +20,6 @@ public class MergeSort
    ******************************************************/
   private static int[] merge( int[] a, int[] b )
   {
-    a= sort(a);
-    b= sort(b);
     int[] Merge=new int[a.length+b.length];
     int AIndex=0;
     int BIndex=0;
