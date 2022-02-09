@@ -1,3 +1,8 @@
+// BA Mitzvah:: Ameer Alnasser, ben Belotser, Ryan Lau, Michael Kamela\
+// Ameer Alnasser
+// APCSpd6
+// HW61:Instructions so Simple...
+//2022-02-06
 /***
   class MergeSort
   Implements mergesort on array of ints.
@@ -16,29 +21,34 @@ public class MergeSort
   private static int[] merge( int[] a, int[] b )
   {
     int[] Merge=new int[a.length+b.length];
-    boolean Sorted=false;
-    int AIndex;
-    int BIndex;
-    int CIndex;
-    while 1==1{
-      if(a[AIndex]>b[bIndex]){
-        Merge[CIndex]=b[i];
-        BIndex++;
+    int AIndex=0;
+    int BIndex=0;
+    int CIndex=0;
+    while (1==1){
+      if(a[AIndex]>b[BIndex]){
+        Merge[CIndex]=b[BIndex];
+        BIndex+=1;
       }
       else{
-        Merge[CIndex]=a[i];
-        AIndex++;
+        Merge[CIndex]=a[AIndex];
+        AIndex+=1;
       }
-      CIndex++;
+      CIndex+=1;
       if(AIndex==a.length){
         while (1==1){
           Merge[CIndex]=b[BIndex];
+          BIndex+=1;
+          CIndex+=1;
         }
       }
       else if(BIndex==b.length){
+        while (1==1){
+          Merge[CIndex]=a[AIndex];
+          AIndex+=1;
+          CIndex+=1;
 
+        }
       }
-    }
     }
     return Merge;
   }//end merge()
@@ -49,9 +59,28 @@ public class MergeSort
    * Sorts input array using mergesort algorithm
    * Returns sorted version of input array (ascending)
    ******************************************************/
-  public static int[] sort( int[] arr )
+  public static int[] sort( int[] arr)
   {
-
+    int[] sort1=new int[(arr.length)/2];
+    int[] sort2=new int[arr.length-(arr.length/2)];
+    int[] output= new int[arr.length];
+    int counter=0;
+    for(int i=0;i<(arr.length/2);i++){
+      sort1[i]=arr[i];
+      sort2[i]=arr[i+(arr.length/2)];
+    }
+    if (sort1.length==1&&sort2.length==1){
+     int[] merge= new int[2];
+     merge=merge(sort1,sort2);
+     output[counter]=merge[0];
+     output[counter+1]=merge[1];
+     counter+=2;
+    }
+    else{
+      sort(sort1);
+      sort(sort2);
+    }
+    return output;
   }//end sort()
 
 
@@ -59,6 +88,7 @@ public class MergeSort
   //-------------------HELPERS-------------------------
   //tester function for exploring how arrays are passed
   //usage: print array, mess(array), print array. Whaddayasee?
+  // It clears the array :D
   public static void mess( int[] a ) {
     for( int i = 0 ; i<a.length; i++ )
       a[i] = 0;
@@ -77,7 +107,6 @@ public class MergeSort
   //main method for testing
   public static void main( String [] args )
   {
-    /*~~~~~~~~~~~~~~ Ye Olde Tester Bar ~~~~~~~~~~~~~~
       int[] arr0 = {0};
       int[] arr1 = {1};
       int[] arr2 = {1,2};
@@ -99,5 +128,8 @@ public class MergeSort
       printArray( sort( arr5 ) );
       printArray( sort( arr6 ) );
       printArray( sort( arr7 ) );
+      /*~~~~~~~~~~~~~~ Ye Olde Tester Bar ~~~~~~~~~~~~~~
+
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }//end main()
+}
