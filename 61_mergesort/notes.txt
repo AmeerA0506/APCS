@@ -1,7 +1,7 @@
 BAR Mitzvah:: Ameer Alnasser, ben Belotser, Ryan Lau, Michael Kamela\
 Ameer Alnasser
 APCSpd6
-HW60:A Termite is-a Turtle, a Thinker is-a Turtle
+HW60:A Termite is-a Turtle, a Thinker is-a Turtle 
 
 OBSERVABLES/DISCO:
 Very discombobulated for the first attempts
@@ -17,14 +17,17 @@ Is it greatest to least or least to greatest? My firmware is based off the premi
 
 THINKER FIRMWARE::
 Distribute the cards with one half going clockwise and one half going counterclockwise so we can distribute the cards quickly and with ease.// We need to get as many sorted decks as quick as we can
-If you have 2 cards, stay put for a hot minute, once an adjacent thinker gives in their card and has no more, then give them your card to sort it.
+If you have 2 cards, stay put for a hot minute, once an adjacent thinker gives in their card and has no more, then give them your card to sort it. 
 If you have the smallest card (IE: 2 of Diamonds) stand in front of the class. The thinker with the 2 of clubs then proceeds to go and give in their card, and while this is going on, other thinkeren are trying to connect their cards. If there is a visible partner around you (IE: if you have the 2 of hearts you see the 2 of spades) you connect them with the smallest under
 While this is going on, to streamline the process, the thinker with the highest card (A of sp) also stands up at a different spot in the class. Then the guy with the A of hearts goes and hands it in, continuing until everyone's hands are cleared.
-Ideally, in the end when every thinker has no cards, the two halves merge to maintain the order.
+Ideally, in the end when every thinker has no cards, the two halves merge to maintain the order. 
 
-Other idea:
+Other idea: 
 When roaming looking for accepters of your card as a giver, look for an empty hand. If not found, then look for the card 1 "card" smaller than yours (x of clubs to x of spades or x of spades to x + 1 of diamonds).
-Once the taker has two cards sorted, look for an adjacent pair and give/take it from them.
-When a thinker now has more than two cards, the lowest card is placed in the left hand and the rest (with the greatest on top) is in the right hand so givers are aware of the range.
-
-
+Once the taker has two cards sorted, look for an adjacent pair and give/take it from them. 
+When a thinker now has more than two cards, the lowest card is placed in the left hand and the rest (with the greatest on top) is in the right hand so givers are aware of the range. 
+Revised firmware::
+1st step: Remember who gave you your cards. If you have more than one card, give half of your deck to one person. Continue until you have one card (and remember who u gave it to)
+2nd step: After having one card, it is now declared sorted. Place it in one of your hands and wait until other people you gave it to give it back.
+3rd step: Do not do anything until all people you gave cards to gave it back. Then, place the lower card you see face down in front of you. Continue until no cards in front of your
+4th step: Give the now sorted deck back to whoever gave it to you
