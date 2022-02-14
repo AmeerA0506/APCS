@@ -102,9 +102,14 @@ public class Review {
       return 0;
     }
   }
-  public static double totalSentimentVal( String word )
-  {
-    for(String e:a)
+  public static double totalSentiment(String fileName){
+    String valueget = textToString(fileName);
+    String[] AdjArray = valueget.split(" ");
+    double output = 0.0;
+    for(int i = 0; i < AdjArray.length; i++){
+      output += sentimentVal(AdjArray[i]);
+    }
+    return output;
   }
 
   /**
@@ -171,9 +176,61 @@ public class Review {
       return randomNegativeAdj();
     }
   }
+public static int starRating(String fileName){
+   int stars=(int) totalSentiment(fileName);
+   if(stars<5){
+     return 1;
+   }
+   else if(stars <15){
+     return 2;
+   }
+   else if(stars<20){
+     return 3;
+   }
+   else if(stars<30){
+     return 4;
+   }
+   else{
+     return 5;
+   }
+}
+
+public static String fakeReview(String fileName){
+  String output="";
+  String newReview=textToString(fileName);
+  boolean positive=true;
+  String[] Adjectives=newReview.split(" ");
+//  if (Math.random()>.5){
+//     positive=false; Used for activity 3, revamped
+//  }
+  if (totalSentiment(fileName)>0){
+    positive=true;
+  }
+  else{
+    positive=true;
+  }
+  for(String e: Adjectives){
+    if((e.substring(0,1).equals("*"))){
+      if(positive==true){
+        output+=randomPositiveAdj()+ " ";
+      }
+      else{
+        output+=randomNegativeAdj()+ " ";
+      }
+    }
+    else{
+      output+=e + " ";
+
+    }
+  }
+  return output;
+}
   public static void main(String[] args){
     Review a = new Review();
     System.out.println(a.sentimentVal("happily"));
-    a.sentimentVal("cold");
+    System.out.println(a.totalSentiment("SimpleReview.txt"));
+    System.out.println(a.totalSentiment("positiveAdjectives.txt"));
+    System.out.println(a.fakeReview("FakeReview.txt"));
+
   }
 }
