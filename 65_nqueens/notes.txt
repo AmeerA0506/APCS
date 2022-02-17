@@ -1,0 +1,9 @@
+BA Mitzvah :: Ameer Alnasser, Ben Belotser, Michael Kamela
+APCS pd6
+HW65 -- How Many Queens Can a Thinker Place, If a Thinker Can Place Queens...
+2022-02-16w
+time spent: 1.0 hrs
+
+DISCO:
+Due to the nature of queens, the first possible solution would be a 4 by 4. This makes sense because a queen in the left corner covers a 3 by 3 radius, with the first gap being in 4 by 4.
+
