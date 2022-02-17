@@ -9,4 +9,7 @@ public int countHi(String str) {
 }
  return countHi(str.substring(1,str.length()));
 }
+public static void main(String[] args) {
+  System.out.println(countHi("xxhixx") + ", " + 1 + ", " + countHi("xhixhix") + ", " + 2 + ", " + countHi("hi") + ", " + 1);
+}
 }

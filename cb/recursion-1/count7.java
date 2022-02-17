@@ -14,4 +14,7 @@ public int count7(int n) {
   }
   return count7((n-n%10)/10);
 }
+public static void main(String[] args) {
+  System.out.println(count7(717) + ", " + 2 + ", " + count7(7) + ", " + 1 + ", " + count7(123) + ", " + 0);
+}
 }

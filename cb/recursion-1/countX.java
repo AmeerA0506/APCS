@@ -9,4 +9,7 @@ public int countX(String str) {
 }
  return countX(str.substring(1,str.length()));
 }
+public static void main(String[] args) {
+  System.out.println(countX("xxhixx") + ", " + 4 + ", " + countX("xhixhix") + ", " + 3 + ", " + countX("hi") + ", " + 0);
+}
 }
