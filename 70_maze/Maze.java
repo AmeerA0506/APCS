@@ -44,7 +44,7 @@ import java.io.*;
 import java.util.*;
 
 
-class Maze
+class MazeSolver
 {
   final private int FRAME_DELAY = 50;
 
