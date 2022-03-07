@@ -5,8 +5,8 @@
 // time spent: 0.5 hrs
 
 /***
- * SKEELTON for
- * class MazeSolver
+ * SKELETON for
+ * class Maze
  * Implements a blind depth-first exit-finding algorithm.
  * Displays probing in terminal.
  *
@@ -44,7 +44,7 @@ import java.io.*;
 import java.util.*;
 
 
-class MazeSolver
+class Maze
 {
   final private int FRAME_DELAY = 50;
 
