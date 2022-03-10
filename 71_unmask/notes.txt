@@ -1,0 +1,19 @@
+// BA Mitzvah: Michael Kamela, Benjamin Belotser, Ameer Alnasser
+// APCS pd0
+// HW71 -- Reading for intent, tracing for VICTORY
+// 2022-03-07m
+// time spent:  hrs
+
+
+DISCO
+* We originally thought this was a sorting algorithm. It is not. The numbers within
+the partitions are not sorted. It merely groups numbers by size relative to c.
+*This algorithm looks really similar to quickSort. (Ameer pointed this out in class.)
+* QCC
+* Why does this algorithm stop working after c > 2?
+* q0: What does it do?
+* a0: It creates a partition at c, where every number to the left of c will be less than c,
+and every number to the right will be greater.
+*
+* q1: Time Complexity?
+* a1: Runtime will be o(n) because there is only one for loop, meaning that the runtime (outcome) will be linear to the input.
