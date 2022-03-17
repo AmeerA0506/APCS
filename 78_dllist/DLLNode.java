@@ -1,3 +1,10 @@
+// (FA)FSA: Fang, Sophia, Ammer
+// APCS pd06
+// HW78 -- Double Up
+// 2022-03-16m
+// time spent: .5 hrs
+
+
 public class DLLNode
 {
   //instance vars
