@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+andom-Access Memory: Ryan Lau, Ameer Alnasser, Melody Lew
+>>>>>>> 8d43f798773e024575ed9b6c87f6d3dabb0a74d1
 Random-Access Memory:: Ryan Lau, Ameer Alnasser, Melody Lew
 APCS pd06
 L07: But These Go Up To Eleven
@@ -38,6 +42,10 @@ QCC:
  For reference: ArrayList<Card>()
 
 1. Remember to initialize! One of our errors was that we did not initialize
+<<<<<<< HEAD
+=======
+cards in Deck.java
+>>>>>>> 8d43f798773e024575ed9b6c87f6d3dabb0a74d1
 cards in Deck.java, and we spent a good chunk of time doing so
 
 2. We had to rename the array names of ranks, suits, and pointValues in
