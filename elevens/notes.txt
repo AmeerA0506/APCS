@@ -1,16 +1,64 @@
-Random-Access Memory: Ryan Lau, Ameer Alnasser, Melody Lew
+Random-Access Memory:: Ryan Lau, Ameer Alnasser, Melody Lew
 APCS pd06
 L07: But These Go Up To Eleven
 2022-03-21m
 time spent: 3.0 hrs
 
+Activity 2:
+    1. Decks contain a list of cards and cards are defined by a suit, point value, and rank.
+    2. 6 cards
+    3. String[] ranks = {"two", "three", "four,", "five", "six", "seven", "eight", "nine", "ten", "jack", "queen", "king", "ace"};
+	   String[] suits = {"clubs", "spades", "diamond", "heart"};
+       int[] pointValues = {2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11};
+    4. The order of ranks and pointValues have to match so that the rank corresponds to its pointValue. The order of suits doesn't matter.
+
+Activity 3:
+    1. 
+    public static String flip() {
+        if (Math.random() > (1.0/3)){
+            return "heads";
+        }
+        return "tails";
+    }
+
+    2. 
+    public static boolean arePermutations(int[] a, int[] b) {
+        boolean jInB = false;
+        for (int j: a) {
+            for (int k: b) {
+                if (j == k) {
+                    jInB = true;
+                }
+            }
+
+            if (jInB == false) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    3. The random integers would have to be 0 and 1, in either order
+
+
+DISCO:
+    0. If we have a toString implemented, we can do System.out.println(object) and the toString will be return
+
+    1. We can initialize and increment multiple variables in a for loop per piazza
+
+    2. We can simplify our ssh into the lab
+
 QCC:
-0. What exactly is <>? What does it indicate? Why do we need them?
- For reference: ArrayList<Card>()
+    0. What exactly is <>? What does it indicate? Why do we need them?
+     For reference: ArrayList<Card>()
 
-1. Remember to initialize! One of our errors was that we did not initialize
-cards in Deck.java
+    1. Remember to initialize! One of our errors was that we did not initialize
+    cards in Deck.java
+    cards in Deck.java, and we spent a good chunk of time doing so
 
-2. We had to rename the array names of ranks, suits, and pointValues in
-DeckTester for each deck. If we wanted to keep the same variable names, we would
-have to set each element of the array to its updated value. Why is this the case?
+    2. We had to rename the array names of ranks, suits, and pointValues in
+    DeckTester for each deck. If we wanted to keep the same variable names, we would
+    have to set each element of the array to its updated value. Why is this the case?
+
+    3. Why would we use an abstract class over an interface?

@@ -1,15 +1,44 @@
-Random-Access Memory: Ryan Lau, Ameer Alnasser, Melody Lew
+Random-Access Memory:: Ryan Lau, Ameer Alnasser, Melody Lew
 APCS pd06
 L07: But These Go Up To Eleven
 2022-03-21m
 time spent: 3.0 hrs
 
+activity two:
+cards are a class referenced by the constructor of decks, without cards you cant have decks.
+
+3 cards
+
+ranks is a string array of "two" to "Ace"
+suits is a string array of the 4 suits
+pointValues is 2-10 for the nonface cards, 10 for facecards, and 11 for ace
+
+rank and pointvalues matters, not suits
+
+activity 3:
+1)  public static String flip() {
+      int rand = (int)(Math.random() * 11);
+      if (rand<3){
+       return "tails";
+       }
+      else {
+      return "heads";
+      }
+    }
+DISCO:
+If we have a toString implemented, we can do System.out.println(object) and the toString will be return
+
+We can add multiple variables in a for loop per piazza
+
+we can simplify our ssh into the lab
+
+The swap method isnt in the ArrayList
 QCC:
 0. What exactly is <>? What does it indicate? Why do we need them?
  For reference: ArrayList<Card>()
 
 1. Remember to initialize! One of our errors was that we did not initialize
-cards in Deck.java
+cards in Deck.java, and we spent a good chunk of time doing so
 
 2. We had to rename the array names of ranks, suits, and pointValues in
 DeckTester for each deck. If we wanted to keep the same variable names, we would
