@@ -1,0 +1,16 @@
+Random-Access Memory: Ryan Lau, Ameer Alnasser, Melody Lew
+APCS pd06
+L07: But These Go Up To Eleven
+2022-03-21m
+time spent: 3.0 hrs
+
+QCC:
+0. What exactly is <>? What does it indicate? Why do we need them?
+ For reference: ArrayList<Card>()
+
+1. Remember to initialize! One of our errors was that we did not initialize
+cards in Deck.java
+
+2. We had to rename the array names of ranks, suits, and pointValues in
+DeckTester for each deck. If we wanted to keep the same variable names, we would
+have to set each element of the array to its updated value. Why is this the case?
