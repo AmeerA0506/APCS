@@ -1,3 +1,9 @@
+// (FA)FSA: Fang, Sophia, Ameer
+// APCS pd06
+// HW 82 -- Roll Your Own Iterator
+// 2022-03-25
+// time spent: 0.5 hrs
+
 /***
  * class ListTester
  * ...for putting your LList through its paces

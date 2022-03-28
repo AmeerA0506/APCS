@@ -1,3 +1,9 @@
+// (FA)FSA: Fang, Sophia, Ameer
+// APCS pd06
+// HW 82 -- Roll Your Own Iterator
+// 2022-03-25
+// time spent: 0.5 hrs
+
 /***
  * class V6Driver
  * ...for testing implementation of Iterable interface
