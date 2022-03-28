@@ -14,14 +14,17 @@
 
 /***
     DISCO
-    Every time itr.next() is run, the pointer immediately jumps to the next element, with no means of going back.
-    This is akin to the Singly Linked nodes we worked
+        Every time itr.next() is run, the pointer immediately jumps to the next element, with no means of going back.
+        This is akin to the Singly Linked nodes we worked
     QCC
-    Why do we need an interim variable?
-    Is there a way to have a pointer "backwards" like the doubly linked node
+        Why do we need an interim variable?
+        Is there a way to have a pointer "backwards" like the doubly linked node
     SUMMARY THE FIRST:
-
+        Using a foreach loop, conditionally check every element of a List.
+        Act accordingly if conditions is true for each element.
     SUMMARY THE SECOND:
+        Using Iterator, while the List has a next element, conditionally check the next element.
+        Act accordingly if conditions is true for each element.
 
 **/
 
