@@ -1,9 +1,9 @@
-/***
- * class LatKtS
- * SKELETON
- * driver class for Latkes
- * Uses a stack to reverse a text string, check for sets of matching parens.
- **/
+// (FA)FSA: Fang, Sophia, Ameer
+// APCS pd06
+// HW 83 -- Latke.
+// 2022-03-28m
+// time spent: 0.5 hrs
+
 
 public class LatKtS
 {
