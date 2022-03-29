@@ -42,10 +42,10 @@ public class Latkes
     }
     else{
       String[] tmp= new String[_stackSize+1];
-      for(int i=0; i< _stack.length-1; i++){
-        tmp[i]=_stack[i];
+      for(int i=0,j=1; i< _stack.length-1; i++,j++){
+        tmp[i]=_stack[j];
       }
-      tmp[tmp.length-1]=s;
+      tmp[_stack.length-1]=s;
       _stack=new String [_stackSize+1];
       _stack=tmp;
     }
