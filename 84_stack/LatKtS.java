@@ -4,15 +4,16 @@
 // 2022-03-30
 // time spent: 1.0 hrs
 
- /*
- ​DISCO
+/*
+ DISCO
  ​- can reverse strings pretty easily
  ​- 2nd method was more difficult ( i think mostly in java inner workings)
  ​- don't think we have the nicest solution for allMatched, but alas
 
  ​QCC
  ​- how would the efficiency improve compared to a different implementation (like loops)?
-*/
+
+ ​*/
 
 /***
  * class LatKtS
@@ -31,9 +32,11 @@ public class LatKtS
   public static String flip( String s )
   {
     Latkes str = new Latkes(s.length());
-    String flipped = "";
     for (int i = 0; i < s.length(); i ++) {
       str.push(s.substring(i, i + 1));
+    }
+    String flipped = "";
+    for (int i = 0; i < s.length(); i ++) {
       flipped += str.pop();
     }
     return flipped;
