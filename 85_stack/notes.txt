@@ -1,0 +1,20 @@
+(FA)FSA -- Fang, Sophia, Ameer
+APCS Pd06
+HW 85 -- Pancakes
+2022-03-30
+time spent: 0.5 hrs
+
+Disco
+    * Import files that are impriotnat!!!
+    * No gang signs for the cosnturctor, no pancakes for the constructor as it
+      is fasting for the holy month of Ramadan
+    * Make the encapsulation diagram as sexy as can be
+
+QCC
+    * Why does the Sun set west?
+    * Why do we exist?
+    * Why is the dark so dark?
+    * Does dark exist?
+    * What is dark but not light?
+    * How turn on dark if no exist?
+    * What can('t?) go inside the gang signs?
