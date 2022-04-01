@@ -4,7 +4,6 @@
 // 2022-03-30
 // time spent: 2.5 hrs
 
-
 /*
 DISCO:
 it is hard to make a language compiler in a different language.
@@ -47,7 +46,7 @@ public class Scheme
      String[] parsed = expr.split("\\s+"); //everythign
      String operand = "";
 
-     for (int i = 0; i < parsed.length; i++){
+     for (int i = parsed.length-1; i >-1; i++){
        System.out.println(stack);
          if (parsed[i].equals( ")")){
          if (operand.equals( "+")){
