@@ -1,12 +1,13 @@
 // (FA)FSA -- Fang, Sophia, Ameer
 // APCS Pd06
 // HW 87 -- The English DO Not Wait in Line for Soup!!!!!!!
-// 2022-03-30
+// 2022-04-01
 // time spent: 1.0 hrs
 
 /*
 Disco:
-
+Gang signs do be important
+if you are calling a method with a null object, it will give u an error, which kind of makes sense, but now we know :)
 QCC:
 <local2> error?!?!?!!?!?!?!?!?!?!?!?
 Our toString did not work for null NodeQueues
