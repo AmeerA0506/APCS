@@ -1,69 +1,71 @@
+// (FA)FSA -- Fang, Sophia, Ameer
+// APCS Pd06
+// HW 87 -- The English DO Not Wait in Line for Soup!!!!!!!
+// 2022-03-30
+// time spent: 1.0 hrs
+
+/*
+Disco:
+
+QCC:
+<local2> error?!?!?!!?!?!?!?!?!?!?!?
+Our toString did not work for null NodeQueues
+Why dont the english wait for soup :()
+*/
 public class NodeQueue<QUASAR> implements Queue<QUASAR>{
 
-  LLNode<QUASAR> line;
+  LLNode<QUASAR> _tail=null;
 
-  public NodeQueue(){
-    line=new LLNode<QUASAR>(null,null);
-  }
-
-  public NodeQueue(QUASAR x){
-    line=new LLNode<QUASAR>(x,null);
-  }
-//
+  //means of removing an element from collection:
+  //Dequeues and returns the first element of the queue.
   public QUASAR dequeue(){
-    LLNode<QUASAR> tmp=line; //phosia
-    QUASAR output=peekFront();//phosia
-    if(isEmpty()){
-    return null;
-  }
-    if(tmp.getNext()==null){ //phosia
-      tmp=new LLNode(null,null);//
-      return output;
+    if(isEmpty()||_tail.getNext()==null){
+      _tail=null;
+      return null;
     }
+    QUASAR output=peekFront();
+    LLNode<QUASAR> tmp=_tail;
     while(tmp.getNext().getNext()!=null){
       tmp=tmp.getNext();
     }
     tmp.setNext(null);
     return output;
   }
-// v,w,x,y,z
+
   //means of adding an element to collection:
   //Enqueue an element onto the back of this queue.
   public void enqueue( QUASAR x ){
-    if(isEmpty()){
-      line=new LLNode<QUASAR>(x, null);
-    }
-    line=new LLNode<QUASAR>(x, line);
+    _tail=new LLNode<QUASAR>(x,_tail);
   }
   //Returns true if this queue is empty, otherwise returns false.
   public boolean isEmpty(){
-    return (line.getCargo()==null);
+    return (_tail==null);
   }
 
   //Returns the first element of the queue without dequeuing it.
   public QUASAR peekFront(){
-    LLNode<QUASAR> tmp=line; //phosia
-    if(isEmpty()){
+    if (isEmpty()){
       return null;
     }
+    LLNode<QUASAR> tmp=_tail;
     while(tmp.getNext()!=null){
       tmp=tmp.getNext();
     }
-    QUASAR output=tmp.getCargo();
-    return output;
-    }
-
-  public String toString(){
-    String output="";
-    LLNode<QUASAR> tmp=line;
-    while(tmp.getNext()!=null){
-      output+=tmp.getCargo()+"<-";
-      tmp=tmp.getNext();
-    }
-    output+=tmp.getCargo();
-    return output;
+    return tmp.getCargo();
   }
-
+  public String toString(){
+  String output="";
+  LLNode<QUASAR> tmp=_tail;
+  if (isEmpty()){
+    return null;
+  }
+  while(tmp.getNext()!=null){
+    output+=tmp.getCargo()+"<-";
+    tmp=tmp.getNext();
+  }
+  output+=tmp.getCargo();
+  return output;
+}
   public class LLNode<QUASAR>
   {
     //instance vars
@@ -116,8 +118,7 @@ public class NodeQueue<QUASAR> implements Queue<QUASAR>{
   }//end class LLNode
 
   public static void main(String[] args){
-    NodeQueue fangMeanie= new NodeQueue("3");
-    System.out.println(fangMeanie);
+    NodeQueue fangMeanie= new NodeQueue();
     fangMeanie.enqueue("Ameer");
     System.out.println(fangMeanie);
     fangMeanie.enqueue("Phosia");
@@ -126,7 +127,6 @@ public class NodeQueue<QUASAR> implements Queue<QUASAR>{
     System.out.println(fangMeanie);
     fangMeanie.dequeue();
     System.out.println(fangMeanie);
-    fangMeanie.dequeue();
-    System.out.println(fangMeanie);
+
   }
 }
