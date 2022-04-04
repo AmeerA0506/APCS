@@ -15,13 +15,14 @@ Why dont the english wait for soup :()
 */
 public class NodeQueue<QUASAR> implements Queue<QUASAR>{
 
-  LLNode<QUASAR> _tail=null;
-
+  private LLNode<QUASAR> _tail=null;
+  private int size;
   //means of removing an element from collection:
   //Dequeues and returns the first element of the queue.
   public QUASAR dequeue(){
     if(isEmpty()||_tail.getNext()==null){
       _tail=null;
+      size=0;
       return null;
     }
     QUASAR output=peekFront();
@@ -30,6 +31,7 @@ public class NodeQueue<QUASAR> implements Queue<QUASAR>{
       tmp=tmp.getNext();
     }
     tmp.setNext(null);
+    size--;
     return output;
   }
 
@@ -37,10 +39,11 @@ public class NodeQueue<QUASAR> implements Queue<QUASAR>{
   //Enqueue an element onto the back of this queue.
   public void enqueue( QUASAR x ){
     _tail=new LLNode<QUASAR>(x,_tail);
+    size++;
   }
   //Returns true if this queue is empty, otherwise returns false.
   public boolean isEmpty(){
-    return (_tail==null);
+    return (size==null);
   }
 
   //Returns the first element of the queue without dequeuing it.
