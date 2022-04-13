@@ -73,22 +73,26 @@ public class MyDeque<Card> implements Deque<Card>
         test.addFirst("Sophia");
         test.addLast("Ameer");
         System.out.println("Empty? " + test.isEmpty());
+        System.out.println("Size: " + test.size());
 
         System.out.println(test.peekFirst());
         System.out.println(test.peekLast());
+        System.out.println("Size: " + test.size());
 
         test.removeFirst();
         System.out.println(test.peekFirst());
         System.out.println(test.peekLast());
-
-
-        test.removeLast();
-        System.out.println(test.peekFirst());
-        System.out.println(test.peekLast());
+        System.out.println("Size: " + test.size());
 
         test.removeLast();
         System.out.println(test.peekFirst());
         System.out.println(test.peekLast());
+        System.out.println("Size: " + test.size());
+
+        test.removeLast();
+        System.out.println(test.peekFirst());
+        System.out.println(test.peekLast());
+        System.out.println("Size: " + test.size());
 
     }
 
