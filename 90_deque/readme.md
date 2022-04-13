@@ -4,7 +4,6 @@ HW 91: DEQUE THE HALLS
 2022-04-13  
 time spent: 0.7 hrs  
 -->
-
 ## To-Do List (Reference to Queue methods)
 
 - size()
