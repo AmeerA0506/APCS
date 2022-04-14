@@ -20,3 +20,9 @@ time spent: 0.7 hrs
 - addFirst()
 - removeLast()
 - peekLast()
+
+
+## Design Decisions
+
+- Due to piazza traffic, we realzied that LinkedList and Deque have very similar functionality, so using LinkedList as our implementation would help us pass through methods.
+- There were also other methods mentioned inside of the implementation of Deque according to Java API, but some of these methods felt unnecessary
