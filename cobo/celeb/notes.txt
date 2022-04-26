@@ -1,0 +1,25 @@
+National Security Agency:: Nora Miller, Sophia Eiden, Ameer Alnasser
+APCS pd 6
+L09: Some Folks Call It A Charades
+2022-04-26
+
+DISCO
+
+QCC
+
+Activity 1:
+  1. Celebrity, game, timer, runner
+  2, isFinished?, celeb array, time
+  3. It must detect when a minute passes, must be able to read an input
+  4. We should make a method to check if the input is correct, also one to start the game, and govern turns and timing
+  5. play method should start the turn, and then read inputs made by the user until it matches the name fo the celebrityClue
+  6 and 7 were voted by the NSA council to be irrelevant and thus will not be answered for the time being
+Activity 2:
+  1. A constructor instantiates an instance of a class and its instance variables
+  2. the heading needs no return type, and it must be called the same name as the class. Also can take in parameters
+  3. name, clue
+  4. getName, getClue,setName, setClue
+  5. done
+  6. done
+Activity 3:
+  1.
