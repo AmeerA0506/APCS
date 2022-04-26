@@ -18,7 +18,7 @@ public class CelebrityRunner
 	public static void main(String [] args)
 	{
 		CelebrityGame a = new CelebrityGame();
-    System.out.println(a.prepareGame());
+    a.prepareGame();
 		//instantiate a Scanner with STDIN as its bytestream
 		//Scanner sc = new Scanner( System.in );
 

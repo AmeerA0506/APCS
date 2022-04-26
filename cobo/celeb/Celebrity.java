@@ -43,7 +43,7 @@ public class Celebrity
 
 	/**
 	 * Supplies the answer for the celebrity.
-	 * @return
+	 * @return=
 	 */
 	public String getAnswer()
 	{
