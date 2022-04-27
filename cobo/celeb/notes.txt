@@ -2,11 +2,13 @@ National Security Agency:: Nora Miller, Sophia Eiden, Ameer Alnasser
 APCS pd 6
 L09: Some Folks Call It A Charades
 2022-04-26
+time taken: 5 hours
+
 Credits to TYLC
 DISCO
-
+GUI is cringe and we'll never touch it
 QCC
-
+What just happened
 Activity 1:
   1. Celebrity, game, timer, runner
   2, isFinished?, celeb array, time
@@ -22,7 +24,11 @@ Activity 2:
   5. done
   6. done
 Activity 3:
-  1.
+  12.CelebrityGame
+  13. It needs to knopw the name and the clue
 Activity 4:
   1. Attributes: gender-char, type of celebrity-string, their role-string, their works-string[]
      Behaviors: return/modify each variable,
+  17. if there is a mehtod of the same name int he superclass, its Overridden
+  18. super()
+  19. extends

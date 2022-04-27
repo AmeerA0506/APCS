@@ -7,30 +7,30 @@
 import java.util.ArrayList;
 
 /**
- * Subclass of Celebrity to show how methods can be overridden and super can be called while changing functionality.
+ * Subclass of Teacher to show how methods can be overridden and super can be called while changing functionality.
  * @author cody.henrichsen
  * @version 1.0 15/09/2018
  */
-public class LiteratureCelebrity extends Celebrity
+public class LiteratureTeacher extends Teacher
 {
 	/**
-	 * The list of clues for the Literature Celebrity. They can be titles of texts, important characters, settings, etc...s
+	 * The list of clues for the Literature Teacher. They can be titles of texts, important characters, settings, etc...s
 	 */
 	private ArrayList<String> clueList;
 
 	/**
-	 * Builds a LiteratureCelebrity instance with an answer and a series of clues as a String separated by commas.
-	 * @param answer The literature celebrity
-	 * @param clues Clues for the literature celebrity
+	 * Builds a LiteratureTeacher instance with an answer and a series of clues as a String separated by commas.
+	 * @param answer The literature Teacher
+	 * @param clues Clues for the literature Teacher
 	 */
-	public LiteratureCelebrity(String answer, String clues)
+	public LiteratureTeacher(String answer, String clues)
 	{
 		super(answer, clues);
 		processClues();
 	}
 
 	/**
-	 * Processes the series of clues for the LiteratureCelebrity by adding all the values to an ArrayList<String> by
+	 * Processes the series of clues for the LiteratureTeacher by adding all the values to an ArrayList<String> by
 	 * splitting the original clue to an array of String.
 	 * The original value is not impacted, thus preserving data and inheritance integrity.
 	 */
@@ -64,7 +64,7 @@ public class LiteratureCelebrity extends Celebrity
 	@Override
 	public String toString()
 	{
-		String dsc = "This is the literature celebrity: " + getAnswer() + "\nThe clues are:\n";
+		String dsc = "This is the literature Teacher: " + getAnswer() + "\nThe clues are:\n";
 
 		for (String word : super.getClue().split(","))
 		{

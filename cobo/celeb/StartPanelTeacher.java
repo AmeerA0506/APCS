@@ -1,3 +1,9 @@
+// National Security Agency:: Nora Miller, Sophia Eiden, Ameer Alnasser
+// APCS pd 6
+// L09: Some Folks Call It A Charades
+// // 2022-04-26
+// time taken: 5 hours
+
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -11,17 +17,17 @@ import javax.swing.JTextField;
 import javax.swing.SpringLayout;
 
 /**
- * The start screen for the CelebrityGame app.
+ * The start screen for the TeacherGame app.
  *
  * @author cody.henrichsen
  * @version 2.1 18/09/2018 Refactored away validation to controller.
  */
-public class StartPanel extends JPanel
+public class StartPanelTeacher extends JPanel
 {
   /**
    * Reference to the Game to call methods.
    */
-  private CelebrityGame controller;
+  private TeacherGame controller;
 
   /**
    * The layout manager for the screen.
@@ -37,14 +43,14 @@ public class StartPanel extends JPanel
   /**
    * RadioButton for the default type.
    */
-  private JRadioButton celebrityRadio;
+  private JRadioButton TeacherRadio;
 
   /**
-   * RadioButton for the Celebrity type.
+   * RadioButton for the Teacher type.
    */
   private JRadioButton literatureRadio;
     /**
-     * RadioButton for the Celebrity type.
+     * RadioButton for the Teacher type.
      */
     private JRadioButton movieRadio;
 
@@ -63,22 +69,22 @@ public class StartPanel extends JPanel
   /**
    * Label for displaying the current number of celebrities added to the game
    */
-  private JLabel celebrityCountLabel;
+  private JLabel TeacherCountLabel;
 
   /**
-   * Textfield to type in the answer for the celebrity.
+   * Textfield to type in the answer for the Teacher.
    */
   private JTextField answerField;
 
   /**
-   * Textfield to type in the clue for the celebrity.
+   * Textfield to type in the clue for the Teacher.
    */
   private JTextField clueField;
 
   /**
-   * Button used to verify and add a Celebrity to the ArrayList of Celebrity for the game
+   * Button used to verify and add a Teacher to the ArrayList of Teacher for the game
    */
-  private JButton addCelebrityButton;
+  private JButton addTeacherButton;
 
   /**
    * Button used to start the game.
@@ -86,18 +92,18 @@ public class StartPanel extends JPanel
   private JButton startButton;
 
   /**
-   * String to populate the clueLabel if Celebrity is picked.
+   * String to populate the clueLabel if Teacher is picked.
    */
-  private String celebrityClue;
-  private String celebrityAnswer;
+  private String TeacherClue;
+  private String TeacherAnswer;
 
   /**
-   * String to populate the clueLabel if Literature Celebrity is picked.
+   * String to populate the clueLabel if Literature Teacher is picked.
    */
   private String literatureClue;
 
   /**
-   * String to populate the clueLabel if Class Generated Celebrity is picked.
+   * String to populate the clueLabel if Class Generated Teacher is picked.
    */
    private String movieClue;
 
@@ -110,7 +116,7 @@ public class StartPanel extends JPanel
   /**
    * The current number of celebrities added to the game
    */
-  private int celebrityCount;
+  private int TeacherCount;
 
 
   /**
@@ -120,30 +126,30 @@ public class StartPanel extends JPanel
    * @param controller
    *            The reference to the game
    */
-  public StartPanel(CelebrityGame controller)
+  public StartPanelTeacher(TeacherGame controller)
   {
     super();
     this.controller = controller;
     this.panelLayout = new SpringLayout();
     this.typeGroup = new ButtonGroup();
-    this.celebrityRadio = new JRadioButton("Celebrity");
-    this.literatureRadio = new JRadioButton("Literature Celebrity");
-    this.movieRadio = new JRadioButton("Movie Celebrity");
-    this.celebrityClue = "Enter the clue for the celebrity";
-    this.celebrityAnswer = "Enter the name of the celebrity";
+    this.TeacherRadio = new JRadioButton("Teacher");
+    this.literatureRadio = new JRadioButton("Literature Teacher");
+    this.movieRadio = new JRadioButton("Movie Teacher");
+    this.TeacherClue = "Enter the clue for the Teacher";
+    this.TeacherAnswer = "Enter the name of the Teacher";
     this.literatureClue = "Enter the clues for the literature celeb separated by commas";
     this.movieClue = "Enter the clues for the movie celeb separated by commas";
 
-    this.clueLabel = new JLabel(celebrityClue);
-    this.answerLabel = new JLabel(celebrityAnswer);
+    this.clueLabel = new JLabel(TeacherClue);
+    this.answerLabel = new JLabel(TeacherAnswer);
 
-    this.answerField = new JTextField("Type celebrity here (4 letters minimum)");
-    this.clueField = new JTextField("Enter celebrity clue here (10 letters minimum)");
-    this.addCelebrityButton = new JButton("Add current celebrity");
-    this.startButton = new JButton("Start Celebrity game");
-    this.celebrityCount = 0;
-    this.countLabelText = "Current Celebrity Count: " + celebrityCount;
-    this.celebrityCountLabel = new JLabel(countLabelText);
+    this.answerField = new JTextField("Type Teacher here (4 letters minimum)");
+    this.clueField = new JTextField("Enter Teacher clue here (10 letters minimum)");
+    this.addTeacherButton = new JButton("Add current Teacher");
+    this.startButton = new JButton("Start Teacher game");
+    this.TeacherCount = 0;
+    this.countLabelText = "Current Teacher Count: " + TeacherCount;
+    this.TeacherCountLabel = new JLabel(countLabelText);
 
     setupPanel();
     setupLayout();
@@ -151,14 +157,14 @@ public class StartPanel extends JPanel
   }
 
   /**
-   * Validation method for the text to create a Celebrity instance.
+   * Validation method for the text to create a Teacher instance.
    *
    * @param answerText
-   *            The name of the Celebrity. Validation requires at least 4
+   *            The name of the Teacher. Validation requires at least 4
    *            characters.
    * @param clueText
    *            The text for the clue. Validation depends on the selected
-   *            Celebrity type, but at least 10 characters are required.
+   *            Teacher type, but at least 10 characters are required.
    * @return Whether the appropriate text amounts are filled and the correct
    *         type of clue is given.
    */
@@ -182,7 +188,7 @@ public class StartPanel extends JPanel
 
     if (answerText.length() > 4)
     {
-      validAnswer = controller.validateCelebrity(answerText);
+      validAnswer = controller.validateTeacher(answerText);
     }
 
     return (validClue && validAnswer);
@@ -197,19 +203,19 @@ public class StartPanel extends JPanel
     this.setLayout(panelLayout);
     this.add(clueLabel);
     this.add(answerLabel);
-    this.add(celebrityRadio);
+    this.add(TeacherRadio);
     this.add(literatureRadio);
     this.add(movieRadio);
     this.add(answerField);
     this.add(clueField);
     this.add(startButton);
-    this.add(celebrityCountLabel);
-    this.add(addCelebrityButton);
+    this.add(TeacherCountLabel);
+    this.add(addTeacherButton);
 
     // Adds the RadioButtons to the group so only one can be selected.
-    celebrityRadio.setSelected(true);
+    TeacherRadio.setSelected(true);
     startButton.setEnabled(true);
-    typeGroup.add(celebrityRadio);
+    typeGroup.add(TeacherRadio);
     typeGroup.add(literatureRadio);
     typeGroup.add(movieRadio);
 
@@ -224,38 +230,38 @@ public class StartPanel extends JPanel
    */
   private void setupLayout()
   {
-    panelLayout.putConstraint(SpringLayout.SOUTH, answerLabel, 150, SpringLayout.WEST, celebrityRadio);
-    panelLayout.putConstraint(SpringLayout.WEST, answerLabel, 0, SpringLayout.WEST, celebrityRadio);
+    panelLayout.putConstraint(SpringLayout.SOUTH, answerLabel, 150, SpringLayout.WEST, TeacherRadio);
+    panelLayout.putConstraint(SpringLayout.WEST, answerLabel, 0, SpringLayout.WEST, TeacherRadio);
 
-    panelLayout.putConstraint(SpringLayout.WEST, clueLabel, 0, SpringLayout.WEST, celebrityRadio);
-    panelLayout.putConstraint(SpringLayout.NORTH, celebrityRadio, 15, SpringLayout.NORTH, this);
-    panelLayout.putConstraint(SpringLayout.WEST, celebrityRadio, 15, SpringLayout.WEST, this);
-    panelLayout.putConstraint(SpringLayout.EAST, addCelebrityButton, 0, SpringLayout.EAST, startButton);
-    panelLayout.putConstraint(SpringLayout.NORTH, addCelebrityButton, 20, SpringLayout.SOUTH, clueField);
-    panelLayout.putConstraint(SpringLayout.WEST, addCelebrityButton, 0, SpringLayout.WEST, celebrityRadio);
+    panelLayout.putConstraint(SpringLayout.WEST, clueLabel, 0, SpringLayout.WEST, TeacherRadio);
+    panelLayout.putConstraint(SpringLayout.NORTH, TeacherRadio, 15, SpringLayout.NORTH, this);
+    panelLayout.putConstraint(SpringLayout.WEST, TeacherRadio, 15, SpringLayout.WEST, this);
+    panelLayout.putConstraint(SpringLayout.EAST, addTeacherButton, 0, SpringLayout.EAST, startButton);
+    panelLayout.putConstraint(SpringLayout.NORTH, addTeacherButton, 20, SpringLayout.SOUTH, clueField);
+    panelLayout.putConstraint(SpringLayout.WEST, addTeacherButton, 0, SpringLayout.WEST, TeacherRadio);
 
-    panelLayout.putConstraint(SpringLayout.NORTH, startButton, 20, SpringLayout.SOUTH, addCelebrityButton);
-    panelLayout.putConstraint(SpringLayout.NORTH, celebrityCountLabel, 0, SpringLayout.NORTH, celebrityRadio);
-    panelLayout.putConstraint(SpringLayout.EAST, celebrityCountLabel, -45, SpringLayout.EAST, this);
+    panelLayout.putConstraint(SpringLayout.NORTH, startButton, 20, SpringLayout.SOUTH, addTeacherButton);
+    panelLayout.putConstraint(SpringLayout.NORTH, TeacherCountLabel, 0, SpringLayout.NORTH, TeacherRadio);
+    panelLayout.putConstraint(SpringLayout.EAST, TeacherCountLabel, -45, SpringLayout.EAST, this);
 
     //Put your custom radio button info here
 
     panelLayout.putConstraint(SpringLayout.NORTH, literatureRadio, 10, SpringLayout.SOUTH, movieRadio);
-    panelLayout.putConstraint(SpringLayout.WEST, movieRadio, 0, SpringLayout.WEST, celebrityRadio);
-    panelLayout.putConstraint(SpringLayout.NORTH, movieRadio, 40, SpringLayout.SOUTH, celebrityRadio);
+    panelLayout.putConstraint(SpringLayout.WEST, movieRadio, 0, SpringLayout.WEST, TeacherRadio);
+    panelLayout.putConstraint(SpringLayout.NORTH, movieRadio, 40, SpringLayout.SOUTH, TeacherRadio);
 
 
-    panelLayout.putConstraint(SpringLayout.WEST, literatureRadio, 0, SpringLayout.WEST, celebrityRadio);
+    panelLayout.putConstraint(SpringLayout.WEST, literatureRadio, 0, SpringLayout.WEST, TeacherRadio);
 
     panelLayout.putConstraint(SpringLayout.NORTH, clueLabel, 10, SpringLayout.SOUTH, answerField);
     panelLayout.putConstraint(SpringLayout.NORTH, answerField, 40, SpringLayout.SOUTH, literatureRadio);
-    panelLayout.putConstraint(SpringLayout.WEST, answerField, 0, SpringLayout.WEST, celebrityRadio);
+    panelLayout.putConstraint(SpringLayout.WEST, answerField, 0, SpringLayout.WEST, TeacherRadio);
     panelLayout.putConstraint(SpringLayout.EAST, answerField, -15, SpringLayout.EAST, this);
 
-    panelLayout.putConstraint(SpringLayout.WEST, clueField, 0, SpringLayout.WEST, celebrityRadio);
+    panelLayout.putConstraint(SpringLayout.WEST, clueField, 0, SpringLayout.WEST, TeacherRadio);
     panelLayout.putConstraint(SpringLayout.SOUTH, clueField, 55, SpringLayout.SOUTH, answerField);
     panelLayout.putConstraint(SpringLayout.EAST, clueField, 0, SpringLayout.EAST, answerField);
-    panelLayout.putConstraint(SpringLayout.WEST, startButton, 0, SpringLayout.WEST, celebrityRadio);
+    panelLayout.putConstraint(SpringLayout.WEST, startButton, 0, SpringLayout.WEST, TeacherRadio);
     panelLayout.putConstraint(SpringLayout.EAST, startButton, 0, SpringLayout.EAST, answerField);
 
   }
@@ -277,7 +283,7 @@ public class StartPanel extends JPanel
       }
     });
 
-    addCelebrityButton.addActionListener(new ActionListener()
+    addTeacherButton.addActionListener(new ActionListener()
                                            {
       public void actionPerformed(ActionEvent mouseClick)
       {
@@ -291,8 +297,8 @@ public class StartPanel extends JPanel
         {
           invalidInput();
         }
-        celebrityCount = controller.getCelebrityGameSize();
-        celebrityCountLabel.setText(countLabelText + celebrityCount);
+        TeacherCount = controller.getTeacherGameSize();
+        TeacherCountLabel.setText(countLabelText + TeacherCount);
       }
     });
 
@@ -302,15 +308,15 @@ public class StartPanel extends JPanel
      *
      */
     literatureRadio.addActionListener(select -> clueLabel.setText(literatureClue));
-    celebrityRadio.addActionListener(select -> clueLabel.setText(celebrityClue));
-    celebrityRadio.addActionListener(select -> clueLabel.setText(movieClue));
+    TeacherRadio.addActionListener(select -> clueLabel.setText(TeacherClue));
+    TeacherRadio.addActionListener(select -> clueLabel.setText(movieClue));
 
 
   }
 
   private void invalidInput()
   {
-    answerField.setText("Type in the celebrity!!");
+    answerField.setText("Type in the Teacher!!");
     answerField.setBackground(Color.RED);
     clueField.setText("Type in the clue");
     clueField.setBackground(Color.RED);
@@ -318,7 +324,7 @@ public class StartPanel extends JPanel
 
   private void addToGame()
   {
-    String type = "Celebrity";
+    String type = "Teacher";
     if (literatureRadio.isSelected())
     {
       type = "Literature";
@@ -331,7 +337,7 @@ public class StartPanel extends JPanel
     String clue = clueField.getText().trim();
     answerField.setText("");
     clueField.setText("");
-    controller.addCelebrity(answer, clue, type);
+    controller.addTeacher(answer, clue, type);
     startButton.setEnabled(true);
   }
 

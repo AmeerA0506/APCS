@@ -1,14 +1,15 @@
+
 // National Security Agency:: Nora Miller, Sophia Eiden, Ameer Alnasser
 // APCS pd 6
 // L09: Some Folks Call It A Charades
-// // 2022-04-26
-// time taken: 5 hours
+// 2022-04-26
+
 /**
- * Starts the Celebrity Game application
+ * Starts the Teacher Game application
  * @author cody.henrichsen
  *
  */
-public class CelebrityRunner
+public class TeacherRunner
 {
 	/**
 	 * The entry point of the Java application.
@@ -16,7 +17,7 @@ public class CelebrityRunner
 	 */
 	public static void main(String [] args)
 	{
-		CelebrityGame a = new CelebrityGame();
+		TeacherGame a = new TeacherGame();
 
 	}
 }

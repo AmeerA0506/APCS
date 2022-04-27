@@ -5,12 +5,12 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 
 /**
- * CelebrityPanel for the game Celebrity
+ * TeacherPanel for the game Teacher
  *
  * @author cody.henrichsen
  * @version 2.9 18/09/2018 Adjusted the listener functionality.
  */
-public class CelebrityPanel extends JPanel
+public class TeacherPanel extends JPanel
 {
 
   /**
@@ -70,7 +70,7 @@ public class CelebrityPanel extends JPanel
   private SpringLayout panelLayout;
 
   /**
-   * The String used when a user correctly guesses the Celebrity
+   * The String used when a user correctly guesses the Teacher
    */
   private String success;
 
@@ -87,16 +87,16 @@ public class CelebrityPanel extends JPanel
   /**
    * Reference to the game instance.
    */
-  private CelebrityGame controller;
+  private TeacherGame controller;
 
   /**
-   * Builds the CelebrityPanel and initializes all data members.
+   * Builds the TeacherPanel and initializes all data members.
    *
    * @param controller
-   *            Reference to the Game passed when the CelebrityPanel is
+   *            Reference to the Game passed when the TeacherPanel is
    *            instantiated in the Frame.
    */
-  public CelebrityPanel(CelebrityGame controller)
+  public TeacherPanel(TeacherGame controller)
   {
     super();
     this.controller = controller;
@@ -109,7 +109,7 @@ public class CelebrityPanel extends JPanel
     this.clueArea = new JTextArea("", 30, 20);
     this.cluePane = new JScrollPane(clueArea);
     this.guessField = new JTextField("Enter guess here", 30);
-    this.success = "You guessed correctly!!! \nNext Celebrity clue is: ";
+    this.success = "You guessed correctly!!! \nNext Teacher clue is: ";
     this.tryAgain = "You have chosen poorly, try again!\nThe clue is: ";
     this.seconds = 60;
     this.countdownTimer = new Timer(1000, timerListener);
@@ -301,7 +301,7 @@ public class CelebrityPanel extends JPanel
       clueArea.append(controller.sendClue());
     }
 
-    if (controller.getCelebrityGameSize() == 0)
+    if (controller.getTeacherGameSize() == 0)
     {
       clueArea.append("\nNo more celebrities to guess.");
       guessButton.setEnabled(false);

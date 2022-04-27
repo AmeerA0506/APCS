@@ -6,26 +6,26 @@
 
 import java.util.ArrayList;
 
-public class MovieCelebrity extends Celebrity{
+public class MovieTeacher extends Teacher{
   	/**
-  	 * The list of clues for the Movie Celebrity. They can be titles of texts, important characters, settings, etc...s
+  	 * The list of clues for the Movie Teacher. They can be titles of texts, important characters, settings, etc...s
   	 */
   	private ArrayList<String> clueList;
     private String role;
 
   	/**
-  	 * Builds a MovieCelebrity instance with an answer and a series of clues as a String separated by commas.
-  	 * @param answer The Movie celebrity
-  	 * @param clues Clues for the Movie celebrity
+  	 * Builds a MovieTeacher instance with an answer and a series of clues as a String separated by commas.
+  	 * @param answer The Movie Teacher
+  	 * @param clues Clues for the Movie Teacher
   	 */
-  	public MovieCelebrity(String answer, String clues)
+  	public MovieTeacher(String answer, String clues)
   	{
   		super(answer, clues);
   		processClues();
   	}
 
   	/**
-  	 * Processes the series of clues for the MovieCelebrity by adding all the values to an ArrayList<String> by
+  	 * Processes the series of clues for the MovieTeacher by adding all the values to an ArrayList<String> by
   	 * splitting the original clue to an array of String.
   	 * The original value is not impacted, thus preserving data and inheritance integrity.
   	 */
@@ -59,7 +59,7 @@ public class MovieCelebrity extends Celebrity{
   	@Override
   	public String toString()
   	{
-  		String dsc = "This is the Movie celebrity: " + getAnswer() + "\nThe clues are:\n";
+  		String dsc = "This is the Movie Teacher: " + getAnswer() + "\nThe clues are:\n";
 
   		for (String word : super.getClue().split(","))
   		{

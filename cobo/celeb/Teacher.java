@@ -1,15 +1,14 @@
 // National Security Agency:: Nora Miller, Sophia Eiden, Ameer Alnasser
 // APCS pd 6
 // L09: Some Folks Call It A Charades
-// // 2022-04-26
-// time taken: 5 hours
+// 2022-04-26
 
 /**
  * Celebrity base class for the Celebrity game.
  * @author cody.henrichsen
  * @version 1.4 17/09/2018
  */
-public class Celebrity
+public class Teacher
 {
 	/**
 	 * The clue to determine the celebrity
@@ -24,12 +23,12 @@ public class Celebrity
 	 * @param answer
 	 * @param clue
 	 */
-	public Celebrity(String answer, String clue)
+	public Teacher(String answer, String clue)
 	{
     _clue=clue;
     _name=answer;
 	}
-  public Celebrity(){
+  public Teacher(){
     _clue="CS Teacher at Stuyvesant";
     _name="Topher Mykolyk";
   }
@@ -78,7 +77,7 @@ public class Celebrity
 		return _name+ ": "+_clue;
 	}
 	public static void main(String[] args){
-    Celebrity billy=new Celebrity("Billie Eilish", "sings hit song bad guy and is a grammy-award winning artist");
+    Teacher billy=new Teacher("Billie Eilish", "sings hit song bad guy and is a grammy-award winning artist");
     System.out.println(billy);
   }
 }

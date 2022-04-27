@@ -1,41 +1,41 @@
+
+import java.util.ArrayList;
+
 // National Security Agency:: Nora Miller, Sophia Eiden, Ameer Alnasser
 // APCS pd 6
 // L09: Some Folks Call It A Charades
-// // 2022-04-26
-// time taken: 5 hours
-import java.util.ArrayList;
-
+// 2022-04-26
 
 /**
- * The framework for the Celebrity Game project
+ * The framework for the Teacher Game project
  *
  * @author cody.henrichsen
  * @version 2.3 25/09/2018 refactored the prepareGame and play methods
  */
-public class CelebrityGame
+public class TeacherGame
 {
 	/**
-	 * A reference to a Celebrity or subclass instance.
+	 * A reference to a Teacher or subclass instance.
 	 */
-	 private Celebrity gameCelebrity;  // the current one; the one that is curretly at play
+	 private Teacher gameTeacher;  // the current one; the one that is curretly at play
 
 	/**
-	 * The GUI frame for the Celebrity game.
+	 * The GUI frame for the Teacher game.
 	 */
-	 public CelebrityFrame gameWindow;
+	 public TeacherFrame gameWindow;
 
 	/**
-	 * The ArrayList of Celebrity values that make up the game
+	 * The ArrayList of Teacher values that make up the game
 	 */
-	 private ArrayList<Celebrity> celebGameList;
+	 private ArrayList<Teacher> celebGameList;
 
 	/**
 	 * Builds the game and starts the GUI
 	 */
-	public CelebrityGame()
+	public TeacherGame()
 	{
-		celebGameList=new ArrayList<Celebrity>();
-		gameWindow=new CelebrityFrame(this);
+		celebGameList=new ArrayList<Teacher>();
+		gameWindow=new TeacherFrame(this);
 	}
 
 	/**
@@ -43,7 +43,7 @@ public class CelebrityGame
 	 */
 	public void prepareGame()
 	{
-		celebGameList = new ArrayList<Celebrity>();
+		celebGameList = new ArrayList<Teacher>();
 		gameWindow.replaceScreen("START");
 	}
 
@@ -57,51 +57,51 @@ public class CelebrityGame
 	 */
 	public boolean processGuess(String guess)
 	{
-		return (guess==gameCelebrity._name);
+		return (guess==gameTeacher._name);
 	}
 
 	/**
-	 * Asserts that the list is initialized and contains at least one Celebrity.
-	 * Sets the current celebrity as the first item in the list. Opens the game
+	 * Asserts that the list is initialized and contains at least one Teacher.
+	 * Sets the current Teacher as the first item in the list. Opens the game
 	 * play screen.
 	 */
 	public void play()
 	{
 		if (celebGameList!= null && celebGameList.size()>0){
-		this.gameCelebrity=celebGameList.get(0);
+		this.gameTeacher=celebGameList.get(0);
 		gameWindow.replaceScreen("GAME");
 	}
 	}
 
 	/**
-	 * Adds a Celebrity of specified type to the game list
+	 * Adds a Teacher of specified type to the game list
 	 *
 	 * @param name
-	 *            The name of the celebrity
+	 *            The name of the Teacher
 	 * @param guess
-	 *            The clue(s) for the celebrity
+	 *            The clue(s) for the Teacher
 	 * @param type
-	 *            What type of celebrity
+	 *            What type of Teacher
 	 */
-	 public void addCelebrity(String name, String guess, String type)
+	 public void addTeacher(String name, String guess, String type)
  	{
- 		if (validateCelebrity(name) && validateClue(guess, type)) {
+ 		if (validateTeacher(name) && validateClue(guess, type)) {
  			if (type.trim().equalsIgnoreCase("Literature")) {
- 				celebGameList.add(new LiteratureCelebrity(name, guess));
+ 				celebGameList.add(new LiteratureTeacher(name, guess));
  			}
  			else if (type.trim().equalsIgnoreCase("Movie")) {
- 				celebGameList.add(new MovieCelebrity(name, guess));
+ 				celebGameList.add(new MovieTeacher(name, guess));
  			}
- 		celebGameList.add(new Celebrity(name, guess));
+ 		celebGameList.add(new Teacher(name, guess));
  		}
  	}
 
  	/**
- 	 * Validates the name of the celebrity. It must have at least 4 characters.
- 	 * @param name The name of the Celebrity
- 	 * @return If the supplied Celebrity is valid
+ 	 * Validates the name of the Teacher. It must have at least 4 characters.
+ 	 * @param name The name of the Teacher
+ 	 * @return If the supplied Teacher is valid
  	 */
- 	public boolean validateCelebrity(String name)
+ 	public boolean validateTeacher(String name)
  	{
  		name = name.trim();
  		return name.length() >= 4;
@@ -109,9 +109,9 @@ public class CelebrityGame
 
  	/**
  	 * Checks that the supplied clue has at least 10 characters or is a series of clues
- 	 * This method would be expanded based on your subclass of Celebrity.
+ 	 * This method would be expanded based on your subclass of Teacher.
  	 * @param clue The text of the clue(s)
- 	 * @param type Supports a subclass of Celebrity
+ 	 * @param type Supports a subclass of Teacher
  	 * @return If the clue is valid.
  	 */
  	public boolean validateClue(String clue, String type)
@@ -135,7 +135,7 @@ public class CelebrityGame
 	 *
 	 * @return Remaining number of celebrities
 	 */
-	public int getCelebrityGameSize()
+	public int getTeacherGameSize()
 	{
 		return celebGameList.size();
 	}
@@ -144,21 +144,21 @@ public class CelebrityGame
 	 * Accessor method for the games clue to maintain low coupling between
 	 * classes
 	 *
-	 * @return The String clue from the current celebrity.
+	 * @return The String clue from the current Teacher.
 	 */
 	public String sendClue()
 	{
-		return gameCelebrity._clue;
+		return gameTeacher._clue;
 	}
 
 	/**
 	 * Accessor method for the games answer to maintain low coupling between
 	 * classes
 	 *
-	 * @return The String answer from the current celebrity.
+	 * @return The String answer from the current Teacher.
 	 */
 	public String sendAnswer()
 	{
-		return gameCelebrity._name;
+		return gameTeacher._name;
 	}
 }
