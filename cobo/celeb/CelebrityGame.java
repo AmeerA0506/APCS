@@ -1,9 +1,10 @@
+
+import java.util.ArrayList;
+
 // National Security Agency:: Nora Miller, Sophia Eiden, Ameer Alnasser
 // APCS pd 6
 // L09: Some Folks Call It A Charades
 // 2022-04-26
-
-import java.util.ArrayList;
 
 /**
  * The framework for the Celebrity Game project

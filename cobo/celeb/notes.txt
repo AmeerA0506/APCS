@@ -2,7 +2,7 @@ National Security Agency:: Nora Miller, Sophia Eiden, Ameer Alnasser
 APCS pd 6
 L09: Some Folks Call It A Charades
 2022-04-26
-
+Credits to TYLC
 DISCO
 
 QCC
@@ -23,3 +23,6 @@ Activity 2:
   6. done
 Activity 3:
   1.
+Activity 4:
+  1. Attributes: gender-char, type of celebrity-string, their role-string, their works-string[]
+     Behaviors: return/modify each variable,

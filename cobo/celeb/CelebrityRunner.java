@@ -1,3 +1,4 @@
+
 // National Security Agency:: Nora Miller, Sophia Eiden, Ameer Alnasser
 // APCS pd 6
 // L09: Some Folks Call It A Charades
@@ -8,7 +9,6 @@
  * @author cody.henrichsen
  *
  */
- import java.util.Scanner;
 public class CelebrityRunner
 {
 	/**
@@ -18,14 +18,6 @@ public class CelebrityRunner
 	public static void main(String [] args)
 	{
 		CelebrityGame a = new CelebrityGame();
-    a.prepareGame();
-		//instantiate a Scanner with STDIN as its bytestream
-		//Scanner sc = new Scanner( System.in );
-
-    // prompt the user to
-
-    //a.add()
-
 
 	}
 }
