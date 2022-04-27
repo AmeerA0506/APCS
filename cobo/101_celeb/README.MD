@@ -5,7 +5,7 @@ L09: Some Folks Call It A Charades
 
 To Do:
   Important
-    Plan and implement celeb class
+    ~Plan and implement celeb class~
     Complete celebGame implementation
       - set files up
       - input validatiopn
