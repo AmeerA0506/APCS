@@ -1,7 +1,8 @@
 // National Security Agency:: Nora Miller, Sophia Eiden, Ameer Alnasser
 // APCS pd 6
 // L09: Some Folks Call It A Charades
-// 2022-04-26
+// // 2022-04-26
+// time taken: 5 hours
 
 /**
  * Celebrity base class for the Celebrity game.
