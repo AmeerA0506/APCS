@@ -58,7 +58,12 @@ public class CelebrityGame
 	 */
 	public boolean processGuess(String guess)
 	{
-		return (guess==gameCelebrity._name);
+		if(guess.equals(gameCelebrity._name)){
+			celebGameList.remove(0);
+			this.gameCelebrity=celebGameList.get(0);
+			return true;
+		}
+		return false;
 	}
 
 	/**
