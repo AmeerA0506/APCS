@@ -1,0 +1,55 @@
+National Security Agency :: Ameer Alnasser, Sophia Eiden, Nora Miller
+APCS pd6
+HW93 -- exploring tree properties, extracting actionable intel from traversals
+2022-05-09m
+time spent: 0.5 hrs
+
+DISCO
+------------------------------------------------
+* 
+================================================
+
+
+QCC
+------------------------------------------------
+* 
+================================================
+
+
+HOW KEEN ARE YOUR POWERS OF OBSERVATION?
+------------------------------------------------
+Q: For a given binary tree, how many unique pre-order traversals are there?
+A: One
+
+Q: For a given binary tree, how many unique in-order traversals are there?
+A: One
+
+Q: For a given binary tree, how many unique post-order traversals are there?
+A: One
+
+Q: For a given traversal, how many unique trees could have produced it?
+A: Infinite
+
+Q: Given a pre-order traversal, what can you infer about its tree?
+A: first node is root
+
+Q: Given a post-order traversal, what can you infer about its tree?
+A: last node is root
+
+Q: What does "1-to-1" mean?
+A:  in terms of trees, it means that the child has only one parent and vice versa, therefore if u pass the parents ypouire guaranteed to hit the child next
+
+Q: What does "onto" mean?
+A: there is a mappage of one thing overlapping
+
+================================================
+
+
+ALGO for ____
+------------------------------------------------
+givens:
+
+procedure:
+
+================================================
+(replicate the algo section above as many times as necessary for distinct algos)
