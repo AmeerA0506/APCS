@@ -1,0 +1,9 @@
+National Security Agency: Nora Miller, Sophia Eiden, Ameer Alnasser
+APCS pd6
+HW94 -- reverse engineering
+2022-05-09m
+time spent: 1 hrs
+
+1. a perfect binary tree has 2^level-1 nodes
+2. at each level, a perfect binary tree has 2^(height) nodes
+3. height of a complete binary tree w n nodes is log(n+1)

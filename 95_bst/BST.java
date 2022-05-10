@@ -1,3 +1,9 @@
+// National Security Agency: Nora Miller, Sophia Eiden, Ameer Alnasser
+// APCS pd6
+// HW94 -- reverse engineering
+// 2022-05-09m
+// time spent: 1 hrs
+
 /**
  * class BST
  * v1:partial
@@ -22,11 +28,10 @@ public class BST
   /**
    * default constructor
    */
-  BST()
+ BST()
   {
-    _root=new TreeNode(null);
+    _root=null;
   }
-
 
   /**
    * void insert( int )
@@ -35,16 +40,40 @@ public class BST
   public void insert( int newVal )
   {
     TreeNode newNode = new TreeNode( newVal );
-    if(root.newNode._cargo
-    /*** YOUR IMPLEMENTATION HERE ***/
+    if(_root!=null){
+    insert(_root,newNode);
+    }
+    else{
+      _root=newNode;
+    }
   }
+    /*** YOUR IMPLEMENTATION HERE ***/
+
   //recursive helper for insert(int)
   public void insert( TreeNode stRoot, TreeNode newNode )
   {
     /*** YOUR IMPLEMENTATION HERE ***/
-  }//end insert()
+    TreeNode one,two;
+        if (newNode.getValue()<stRoot.getValue()){
+          if(stRoot.getLeft()==null){
+          stRoot.setLeft(newNode);
+        }
+        else{
+          one=stRoot.getLeft();
+          insert(one,newNode);
+        }
+      }
 
-
+    else{
+      if(stRoot.getRight()==null){
+      stRoot.setRight(newNode);
+    }
+    else{
+      two=stRoot.getRight();
+      insert(two,newNode);
+    }
+}
+}
 
 
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -59,28 +88,50 @@ public class BST
     preOrderTrav( _root );
   }
   public void preOrderTrav( TreeNode currNode )
-  {
-    /*** YOUR IMPLEMENTATION HERE ***/
-  }
+    {
+      System.out.println(currNode.getValue());
+      if (currNode.getLeft() != null) {
+        preOrderTrav(currNode.getLeft());
+      }
+      if(currNode.getRight() != null) {
+        preOrderTrav(currNode.getRight());
+      }
+    }
 
   //recurse left, process root, recurse right
   public void inOrderTrav()
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    inOrderTrav(_root);
   }
   public void inOrderTrav( TreeNode currNode )
   {
     /*** YOUR IMPLEMENTATION HERE ***/
+    if (currNode.getLeft() != null) {
+      preOrderTrav(currNode.getLeft());
+    }
+    System.out.println(currNode.getValue());
+
+    if(currNode.getRight() != null) {
+      preOrderTrav(currNode.getRight());
+    }
+
   }
 
   //recurse left, recurse right, process root
   public void postOrderTrav()
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+  postOrderTrav(_root);
   }
   public void postOrderTrav( TreeNode currNode )
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    if (currNode.getLeft() != null) {
+      preOrderTrav(currNode.getLeft());
+    }
+    if(currNode.getRight() != null) {
+      preOrderTrav(currNode.getRight());
+    }
+    System.out.println(currNode.getValue());
+
   }
 
   //~~~~~~~~~~~~~^~~TRAVERSALS~~^~~~~~~~~~~~~~~~~~~~~~
@@ -90,7 +141,6 @@ public class BST
   //main method for testing
   public static void main( String[] args )
   {
-    /*~~~~~~~~~~~~move~me~down~~~~~~~~~~~~~~~~~~~~~~
 
       BST arbol = new BST();
 
@@ -116,7 +166,6 @@ public class BST
       arbol.postOrderTrav();
 
       System.out.println( "\n-----------------------------");
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }
 
 }//end class

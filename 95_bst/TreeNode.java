@@ -1,3 +1,9 @@
+// National Security Agency: Nora Miller, Sophia Eiden, Ameer Alnasser
+// APCS pd6
+// HW94 -- reverse engineering
+// 2022-05-09m
+// time spent: 1 hrs
+
 /**
  * class TreeNode
  * SKELETON
