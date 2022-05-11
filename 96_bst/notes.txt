@@ -1,0 +1,12 @@
+  Alcoholics Anonymous 4 Non-Men:  Ameer Alnasser, Nora Miller
+ APCS pd6
+ HW96 -- reverse engineering
+ time spent: 2 hrs
+
+DISCO:
+Its hard finding the expected output apparently
+Theres this weird edge case for height i idnt really get but still coded it
+There needs to be a check on if search is using a null _root
+QCC:
+Why need edge case #8 where u dont add 1
+Nice height code?
