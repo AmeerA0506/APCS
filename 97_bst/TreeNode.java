@@ -1,9 +1,8 @@
-// Non-Men Alcoholics Anonymous: Nora Miller, Ameer Alnasser
+// National Security Agency: Nora Miller, Ameer Alnasser, SOphia Eiden
 // APCS pd6
-// HW96 -- reverse engineering
-// 2022-05-10w
+// HW97 -- reverse engineering
+// 2022-05-11w
 // time spent: 2 hrs
-
 /**
  * class TreeNode
  * SKELETON
