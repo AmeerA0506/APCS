@@ -5,50 +5,67 @@
 import java.util.ArrayList;
 public class ArrayPriorityQueue implements PriorityQueue{
   public ArrayList<Integer> _container;
-  public int min;
+  public int max;
   public ArrayPriorityQueue(){
     _container=new ArrayList<Integer>();
-     min=10;
+     max=0;
   }
   public void add(int x){
     _container.add(x);
-    if(x<min){
-      min=x;
+    if(x>=max){
+      max=x;
     }
   }
   public boolean isEmpty(){
     return (_container.size()==0);
   }
   public int peekMin(){
-    return min;
+    int y=max;
+    for(int e: _container){
+      if(e<=y){
+        y=e;
+      }
+    }
+    return y;
   }
   public int removeMin(){
-    _container.remove(_container.get(min));
-    return min;
+    int z=peekMin();
+  _container.remove(_container.indexOf(z));//_container.remove(_container.get(z))
+    return z;
   }
   public String toString(){
     return _container.toString();
   }
   public static void main(String[] args){
     ArrayPriorityQueue x=new ArrayPriorityQueue();
-//  x.add(0);
-//    x.add(1);
-//    x.add(3);
-//    x.add(7);
-    x.add(11);
-    x.add(12);
+    x.add(0);
     x.add(13);
+    x.add(11);
+    x.add(4);
+    x.add(3);
+    x.add(7);
+    x.add(12);
+    x.add(14);
+    x.add(15);
+    System.out.println("min:"+x.peekMin());
+    System.out.println( x.removeMin());
+    System.out.println(x);
+    System.out.println("min:"+x.peekMin());
 
-    System.out.println( x.peekMin());
-    // System.out.println(x);
-    // x.removeMin();
-    // System.out.println(x);
-    // x.removeMin();
-    // System.out.println(x);
-    // x.removeMin();
-    // System.out.println(x);
-    // x.removeMin();
-    // System.out.println(x);
+    System.out.println(x.removeMin());
+    System.out.println(x);
+    System.out.println("min:"+x.peekMin());
+
+    System.out.println(x.removeMin());
+     System.out.println(x);
+     System.out.println("min:"+x.peekMin());
+
+System.out.println(x.removeMin());
+    System.out.println(x);
+    System.out.println("min:"+x.peekMin());
+
+  System.out.println(x.removeMin());
+    System.out.println(x);
 
 
   }
