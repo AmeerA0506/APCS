@@ -4,6 +4,13 @@
 // 2022-05-16m
 // time spent: 1 hrs
 
+/*
+DISCO:
+ArrayLists have some methods that are used in ALHeap
+QCC:
+N/A
+*/
+
 /**
  * class ALHeap
  * SKELETON
