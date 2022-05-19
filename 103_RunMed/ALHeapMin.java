@@ -56,7 +56,9 @@ public class ALHeapMin
     return _heap.isEmpty();
   }//O(?)
 
-
+  public int size(){
+    return _heap.size();
+  }
   /**
    * Integer peekMin()
    * Returns min value in heap
@@ -191,7 +193,7 @@ public class ALHeapMin
   public static void main( String[] args )
   {
 
-      ALHeap pile = new ALHeap();
+      ALHeapMin pile = new ALHeapMin();
 
       pile.add(2);
       System.out.println(pile);
