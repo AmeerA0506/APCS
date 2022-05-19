@@ -56,7 +56,9 @@ public class ALHeapMax
     return _heap.isEmpty();
   }//O(?)
 
-
+  public int size(){
+    return _heap.size();
+  }
   /**
    * Integer peekMax()
    * Returns Max value in heap
@@ -74,8 +76,8 @@ public class ALHeapMax
    * Postcondition: Tree exhibits heap property.
    * ALGO:
    *
-   Maxheap: smallest on top. adding value x
-   AssuMaxg that all children of Maxheap are also Maxheaps:
+   Maxheap: greatest on top. adding value x
+   Assuming that all children of Maxheap are also Maxheaps:
    if x> all values
    we should go find the first empty child hole and place it there
    if some values < x < some values,
@@ -104,7 +106,7 @@ public class ALHeapMax
 
   /**
    * removeMax()  ---  means of removing an element from heap
-   * Removes and returns least element in heap.
+   * Removes and returns most element in heap.
    * Postcondition: Tree maintains heap property.
    * ALGO:
    * Maxheap: smallest on top. removing value x
@@ -129,8 +131,8 @@ public class ALHeapMax
     int root = 0;
     int maxChild;
     //swap the new "root" to its correct place
-    while ((((2*root + 1) < _heap.size()) && _heap.get(root) < _heap.get(2*root + 1)) ||
-            (((2*root + 2) < _heap.size()) &&_heap.get(root) < _heap.get(2*root + 2))) {
+    while ((((2*root + 1)/* while there is a parent*/ < _heap.size()) && _heap.get(root) > _heap.get(2*root + 1)) ||
+            (((2*root + 2) < _heap.size()) &&_heap.get(root) > _heap.get(2*root + 2))) {
       maxChild = maxChildPos(root);
       swap(root, maxChild);
       root = maxChild;
@@ -191,7 +193,7 @@ public class ALHeapMax
   public static void main( String[] args )
   {
 
-      ALHeap pile = new ALHeap();
+      ALHeapMax pile = new ALHeapMax();
 
       pile.add(2);
       System.out.println(pile);
