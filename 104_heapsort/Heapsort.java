@@ -51,7 +51,7 @@ public class Heapsort
       int minChildPos;
       int maxChildPos;
 
-      while(lastLeaf!=0) {
+      while(lastLeaf!=data.length) {
 
         //choose child w/ max value, or check for child
         maxChildPos=maxChildPos(0,lastLeaf,data);
@@ -64,7 +64,7 @@ public class Heapsort
         }
         //if i am > least child, swap with that child
         else {
-            swap(pos,minChildPos(0,lastLeaf,data),data);
+            swap(pos,maxChildPos,data);
         }
       }
 
